@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Bauyrzhan Kozhyaev](https://up.htmlacademy.ru/htmlcss/19/user/507485).
-* Наставник: Артур Мирзоян.
+* Наставник: [Артур Мирзоян](https://htmlacademy.ru/profile/id302093).
 
 ---
 
