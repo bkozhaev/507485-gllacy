@@ -4,40 +4,124 @@
     <meta charset="utf-8">
     <title>Gllacy Shop Main</title>
   </head>
-  <body>
+  <body style="background: rgb(132, 157, 143)">
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="#"><img src="img/logo.svg" width="100" height="100" alt="Логотип «ГлейсиШоп»"></a>
+        <a class="main-header-logo" href="#">
+          <img src="img/logo.svg" width="154" height="64" alt="Логотип «ГлейсиШоп»">
+        </a>
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="delivery.svg">Доставка и олпата</a></li>
+          <li>
+            <a href="catalog.html"></a>
+              Каталог
+              <!-- добавил выпадающий список в каталог  -->
+              <ul class="site-navigation-submenu">
+                    <li class="submenu-item"><a href="#">Новинки</a></li>
+                    <li><hr class="submenu-line"></li>
+                    <li class="submenu-item"><a href="#">Сливочное</a></li>
+                    <li class="submenu-item-current"><a href="#">Щербеты</a></li>
+                    <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
+                    <li class="submenu-item"><a href="#">Мелорин</a></li>
+              </ul>
+
+          </li>
+
+          <li>
+            <a href="delivery.svg">Доставка и олпата
+            </a>
+          </li>
           <li><a href="about-company.svg">О Компании</a></li>
         </ul>
-
-        <ul class="user-navigation">
-          <li><a href="#">Поиск</a></li>
-          <li><a href="#">Вход</a></li>
-          <li><a href="#">Пусто</a></li>
-        </ul>
       </nav>
-    </header>
 
-    <main class="container">
-      <h1 class="visually-hidden">Глейси</h1>
-      <section class="big-ad">
-        <h2 class="ad-title">Крем-брюле  и пломбир с малиновым джемом</h2>
+      <ul class="user-actions">
+        <!-- переделал ссылки в кнопки -->
+        <li>
+          <button name="loupe" type="button">
+            <img src="img/loupe.svg" width="17" height="17" alt="loupe">
+          </button>
+
+          <!-- вставил выпадающее меню под кнопку  -->
+          <section class="modal modal-search">
+            <h2 class="visually-hidden">Поиск по сайту</h2>
+            <!-- Здесь будет форма -->
+          </section>
+        </li>
+
+        <li>
+          <button name="entrance" type="button">
+            <img src="img/entrance.svg" width="21" height="19" alt="entrance">
+            Вход
+          </button>
+          <section class="modal modal-login">
+            <h2 class="visually-hidden">Меню регистрации</h2>
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+            <!--Здесь будет форма  -->
+          </section>
+        </li>
+        <li><button name="basket" type="button"><img src="img/basket.svg" alt="basket">Пусто</button></li>
+      </ul>
+
+      <div class="header-contact">
+        <!-- добавил breadcrumps со второй страницы в header -->
+        <ul class="breadcrumps">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="index.html">Каталог</a></li>
+          <li><a href="index.html">Сливочное</a></li>
+        </ul>
+        <!-- перенес блок с main в header так как этот блок повторяется на двух страницах -->
         <div class="ad-contact">
           <p>с 10 до 20, ежедневно<br>
           <strong>8 812 450-25-25</strong></p>
         </div>
-        <img class="big-icecreams" src="img/icecreame" width="200" height="200" alt="Крембрюле и пломбир с малиновым джемом">
-        <a class="button ad-button" href="#">Давайте оба!</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="visually-hidden">Глейси</h1>
+
+      <section class="big-ad">
+
+        <ul>
+          <li>
+            <img class="big-ice-cream" src="img/ice-cream-big.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
+            <div class="big-ad-name">
+              <h2 class="big-ad-title">Крем-брюле  и пломбир с малиновым джемом</h2>
+              <a class="button big-ad-button" href="#">Давайте оба!</a>
+            </div>
+          </li>
+          <li>
+            <img class="big-icecream" src="img/ice-cream-big.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
+            <div class="big-ad-name">
+              <h2 class="big-ad-title">Крем-брюле  и пломбир с малиновым джемом</h2>
+              <a class="button big-ad-button" href="#">Давайте оба!</a>
+            </div>
+          </li>
+          <li>
+            <img class="big-icecream" src="img/ice-cream-big.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
+            <div class="big-ad-name">
+              <h2 class="big-ad-title">Крем-брюле  и пломбир с малиновым джемом</h2>
+              <a class="button big-ad-button" href="#">Давайте оба!</a>
+            </div>
+          </li>
+        </ul>
+
         <ul class="pagination-list">
-          <li class="pagination-item-current"><a href="#">x</a></li>
-          <li class="pagination-item-current"><a href="#">x</a></li>
-          <li class="pagination-item-current"><a href="#">x</a></li>
+          <!-- Переделал ссылки в кнопки  -->
+          <li><button type="button" name="button"></button></li>
+          <li class="pagination-item-current">
+            <button type="button" name="listalka"></button>
+          </li>
+          <li class="pagination-item-current">
+            <button type="button" name="listalka"></button>
+          </li>
+          <li class="pagination-item-current">
+            <button type="button" name="listalka"></button>
+          </li>
         </ul>
       </section>
+
       <section class="small-ad">
         <h2 class="visually-hidden">Дополнительная реклама</h2>
         <ul class="small-ad-list">
@@ -45,53 +129,55 @@
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш
                 заказ банку малинового варенья бесплатно.</p>
-            <img class="malinka" src="img/malinka" width="100" height="100" alt="Малина">
+            <img class="malinka" src="img/malina-background.jpg" width="560" height="229" alt="Малина">
             <a class="button small-ads-button" href="#">Хочу варенье!</a>
           </li>
 
           <li class="small-ad-item">
             <h3>Шоколад даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <img class="chocolate" src="img/chocolate" width="100" height="100" alt="Шоколадная присыпка">
+            <img class="chocolate" src="img/chocolat-background.jpg" width="560" height="229" alt="Шоколадная присыпка">
             <a class="button small-ads-button" href="#">Хочу шоколадки!</a>
           </li>
         </ul>
       </section>
+
       <section class="hit-creams">
         <h2 class="visually-hidden">Хиты продаж</h2>
         <ul class="hit-creams-list">
           <li class="hit-creams-item">
             <a href="#">
-              <p><img src="img/hit-1" alt="хит"></p>
-              <img src="img/ice-cream-1" width="100" height="100" alt="Сливочное мороженое">
-              <p class="hit-creams-price"><img src="img/price-1" alt="310 р/кг"></p>
+              <p><img src="img/hit.svg" alt="хит"></p>
+              <!-- здесь мы договаривались вставить рисунок хит как псевдо элемент в css, но пока ничего не тргал -->
+              <img src="img/hit-ice-cream-1.png" width="267" height="267" alt="Сливочное мороженое">
+              <p class="hit-creams-price">310<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
               <p class="hit-creams-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
             </a>
           </li>
 
           <li class="hit-creams-item">
             <a href="#">
-              <p><img src="img/hit-2" alt="хит"></p>
-              <img src="img/ice-cream-2" width="100" height="100" alt="Сливочно-кофейное мороженое">
-              <p class="hit-creams-price"><img src="img/price-2" alt="380 р/кг"></p>
+              <p><img src="img/hit.svg" alt="хит"></p>
+              <img src="img/hit-ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное мороженое">
+              <p class="hit-creams-price">380<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
               <p class="hit-creams-title">Сливочно-кофейное с кусочками шоколада</p>
             </a>
           </li>
 
           <li class="hit-creams-item">
             <a href="#">
-              <p><img src="img/hit-3" alt="хит"></p>
-              <img src="img/ice-cream-3" width="100" height="100" alt="Сливочно-клубничное мороженое">
-              <p class="hit-creams-price"><img src="img/price-3" alt="355 р/кг"></p>
+              <p><img src="img/hit.svg" alt="хит"></p>
+              <img src="img/hit-ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное мороженое">
+              <p class="hit-creams-price">355<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
               <p class="hit-creams-title">Сливочно-клубничное с присыпкой из белого шоколада</p>
             </a>
           </li>
 
           <li class="hit-creams-item">
             <a href="#">
-              <p><img src="img/hit-4" alt="хит"></p>
-              <img src="img/ice-cream-4" width="100" height="100" alt="Сливочное крем-брюле мороженое">
-              <p class="hit-creams-price"><img src="img/price-4" alt="415 р/кг"></p>
+              <p><img src="img/hit.svg" alt="хит"></p>
+              <img src="img/hit-ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле мороженое">
+              <p class="hit-creams-price">415<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
               <p class="hit-creams-title">Сливочное крем-брюле с карамельной подливкой</p>
             </a>
           </li>
@@ -127,7 +213,6 @@
         <p>Новое в нашем блоге</p>
         <h3 class="blog-news-title"><a href="blog-news.html">10 способов сервировки фруктовых щербетов к столу</a></h3>
         <img class="blog-news-image" src="img/blog-news-image.jpg" width="200" height="100" alt="клубничное мороженое">
-
       </section>
 
       <section class="subscription">
@@ -153,57 +238,40 @@
           </p>
           <a class="button location-button" href="#">Форма обратной связи</a>
         </div>
-
       </section>
     </main>
 
     <footer class="main-footer">
-
       <div class="footer-social">
         <ul>
           <li><a class="social-button" href="#">Вконтакте</a></li>
           <li><a class="social-button" href="#">Фейсбук</a></li>
           <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
         </ul>
       </div>
       <div class="sertification">
-        <p><a href="#"><img src="img/heart-icon" width="100" height="100" alt="heart-icon">Для поставщиков</a></p>
-        <p><a href="#">О производстве</a></p>
-        <p><a href="#">Наши документы</a></p>
-        <p><a href="#">Экологические стандарты</a></p>
+        <!-- убрал параграфы и добавл два блока div  -->
+        <div class="footer-company-info">
+          <a href="#">
+            <img src="img/heart-icon" width="100" height="100" alt="heart-icon">
+            Для поставщиков
+          </a>
+          <a href="#">О производстве</a>
+        </div>
+        <div class="footer-company-info">
+          <a href="#">Наши документы</a>
+          <a href="#">Экологические стандарты</a>
+        </div>
       </div>
       <p class="footer-copyright">
 
         <a class="button" href="https://htmlacademy.ru"><img src="img/htmlAcademyIcon.svg" alt="html Academy"></a><br>
-        <span>Сделано в HTML Academy &copy; 2017</span>
+        <span>Сделано в HTML Academy &copy; 2017</span> //ссылка
       </p>
     </footer>
 
-    <section class="modal modal-catalog">
-      <h2 class="visually-hidden">Каталог мороженого</h2>
-      <ul class="modal-catalog-list">
-        <li class="modal-catalog-item"><a href="#">Новинки</a></li>
-        <hr class="modal-catalog-line">
-        <li class="modal-catalog-item"><a href="#">Сливочное</a></li>
-        <li class="modal-catalog-item-current"><a href="#">Щербеты</a></li>
-        <li class="modal-catalog-item"><a href="#">Фруктовый лед</a></li>
-        <li class="modal-catalog-item"><a href="#">Мелорин</a></li>
-      </ul>
-    </section>
-
-    <section class="modal modal-search">
-      <h2 class="visually-hidden">Поиск по сайту</h2>
-      <!-- Здесь будет форма -->
-    </section>
-
-    <section class="modal modal-login">
-      <h2 class="visually-hidden">Меню регистрации</h2>
-      <a href="#">Забыли пароль?</a>
-      <a href="#">Новая регистрация</a>
-      <!--Здесь будет форма  -->
-    </section>
-
-    <section class="modal modal-feedback">
+    <section  class="modal modal-feedback">
       <h2 class="visually-hidden">Меню для вопросов</h2>
       <h3>Мы обязательно вам ответим!</h3>
       <!-- Здесь будет форма  -->
