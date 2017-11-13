@@ -1,0 +1,238 @@
+
+body {
+  margin: auto;
+  background-color: rgb(132, 157, 143);
+  width: 1200px;
+
+}
+
+.main-header {
+  display: inline-flex;
+}
+
+.site-navigation {
+  display: inline-flex;
+}
+
+.site-navigation li {
+  margin-left: 10px;
+}
+
+.user-actions {
+  display: inline-flex;
+}
+
+.container {
+  margin-left: 25px;
+}
+
+.big-ad {
+    width: 1045px;
+    margin: auto;
+    color: #fff;
+    position: relative;
+
+}
+
+.slider{
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-slides {
+  width: 300%;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  }
+
+.slide {
+  position: relative;
+  width: 1045px;
+  float: left;
+}
+
+.big-ad-name {
+  position: absolute;
+  top: 40%
+
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider-slides {
+  display: flex;
+}
+
+.slide-1,
+.slide-2,
+.slide-3 {
+  display: none;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background-color: #fff;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+#btn-1:checked ~ .big-ad .slider .slider-slides .slide-1 {
+  display: inline-block;
+}
+#btn-2:checked ~ .big-ad .slider .slider-slides .slide-2{
+    display: inline-block;
+}
+#btn-3:checked ~ .big-ad .slider .slider-slides .slide-3{
+    display: inline-block;
+}
+
+.container input[type=radio] {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.additional-ad {
+  display: inline-flex;
+}
+
+.malinka {
+  background: url("../img/malina-background.jpg") no-repeat;
+  background-size: 560px, 229px;
+  border-radius: 15px;
+  color: #fff;
+  width: 560px;
+  height: 229px;
+
+}
+
+.chocolat {
+  background: url("../img/chocolat-background.jpg") no-repeat;
+  background-size: 560px, 229px;
+  border-radius: 15px;
+  color: #fff;
+  width: 560px;
+  height: 229px;
+  margin-left: 25px;
+}
+
+.hit-creams-list {
+  display: inline-flex;
+}
+
+.hit-creams-item {
+  position: relative;
+  width: 267px;
+  height: 267px;
+  margin-right: 25px;
+}
+
+
+.hit-creams-item::before {
+  content: "";
+  background: url("../img/hit.svg") no-repeat;
+  width: 61px;
+  height: 61px;
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.shop-info {
+  background: url("../img/wafer.jpg");
+  border-radius: 15px;
+  width: 1146px;
+  height: 306px;
+  display: block;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.shop-info-list {
+  display: inline-block;
+}
+
+.shop-info-item {
+  display: inline-flex;
+  width: 520px;
+}
+
+.blog {
+  display: flex;
+  margin-top: 20px;
+}
+
+.blog-news {
+  background: url("../img/strawberry-background.jpg") no-repeat;
+  width: 560px;
+  height: 220px;
+  border-radius: 15px;
+}
+
+.subscription {
+  background-image: repeating-linear-gradient(-45deg, white 0, white 10px, rgb(146, 205, 255) 10px, rgb(146, 205, 255) 20px, white 20px, white 30px, rgb(254, 158, 144) 30px, rgb(254, 158, 144) 40px);
+  width: 560px;
+  height: 220px;
+  border-radius: 15px;
+  position: relative;
+  margin-left: 25px;
+}
+
+.white-background {
+  background-color: white;
+  display: block;
+  width: 549px;
+  height: 211px;
+  border-radius: 15px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.location {
+  background: url("../img/map-background.jpg") no-repeat;
+  width: 1200px;
+  height: 430px;
+}
+
+.main-footer {
+  display: inline-flex;
+}
+
+.footer-social {
+  width: auto;
+}
+
+.footer-social li {
+  display: inline-block;
+}
+
+.sertification {
+  display: flex;
+}
+
+.footer-company-info {
+  width: 220px;
+  margin-left: 50px;
+}

@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy Shop Main</title>
+    <link rel="stylesheet" href="css/index.css">
   </head>
-  <body style="background: rgb(132, 157, 143)">
+  <body>
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="#">
@@ -12,8 +13,8 @@
         </a>
         <ul class="site-navigation">
           <li>
-            <a href="catalog.html"></a>
-              Каталог
+            <a href="catalog.html">Каталог</a>
+
               <!-- добавил выпадающий список в каталог  -->
               <ul class="site-navigation-submenu">
                     <li class="submenu-item"><a href="#">Новинки</a></li>
@@ -81,65 +82,64 @@
     <main class="container">
       <h1 class="visually-hidden">Глейси</h1>
 
+      <input type="radio" id="btn-1" name="toggle" checked>
+      <input type="radio" id="btn-2" name="toggle" >
+      <input type="radio" id="btn-3" name="toggle" >
+
+      <div class="slider-controls">
+        <label for="btn-1"></label>
+        <label for="btn-2"></label>
+        <label for="btn-3"></label>
+      </div>
+
       <section class="big-ad">
+        <div class="slider">
+            <div class="slider-slides">
 
-        <ul>
-          <li>
-            <img class="big-ice-cream" src="img/ice-cream-big.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
-            <div class="big-ad-name">
-              <h2 class="big-ad-title">Крем-брюле  и пломбир с малиновым джемом</h2>
-              <a class="button big-ad-button" href="#">Давайте оба!</a>
-            </div>
-          </li>
-          <li>
-            <img class="big-icecream" src="img/ice-cream-big.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
-            <div class="big-ad-name">
-              <h2 class="big-ad-title">Крем-брюле  и пломбир с малиновым джемом</h2>
-              <a class="button big-ad-button" href="#">Давайте оба!</a>
-            </div>
-          </li>
-          <li>
-            <img class="big-icecream" src="img/ice-cream-big.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
-            <div class="big-ad-name">
-              <h2 class="big-ad-title">Крем-брюле  и пломбир с малиновым джемом</h2>
-              <a class="button big-ad-button" href="#">Давайте оба!</a>
-            </div>
-          </li>
-        </ul>
+              <div class="slide-1">
+                <img class="big-ice-cream" src="img/ice-cream-big.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
+                <div class="big-ad-name">
+                  <h2 class="big-ad-title">Крем-брюле  и пломбир с малиновым джемом</h2>
+                  <a class="button big-ad-button" href="#">Давайте оба!</a>
+                </div>
+              </div>
 
-        <ul class="pagination-list">
-          <!-- Переделал ссылки в кнопки  -->
-          <li><button type="button" name="button"></button></li>
-          <li class="pagination-item-current">
-            <button type="button" name="listalka"></button>
-          </li>
-          <li class="pagination-item-current">
-            <button type="button" name="listalka"></button>
-          </li>
-          <li class="pagination-item-current">
-            <button type="button" name="listalka"></button>
-          </li>
-        </ul>
+              <div class="slide-2">
+                <img class="big-icecream" src="img/ice-cream-big-2.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
+                <div class="big-ad-name">
+                  <h2 class="big-ad-title">Шоколадный пломбир и лимонный сорбет</h2>
+                  <a class="button big-ad-button" href="#">Давайте оба!</a>
+                </div>
+              </div>
+
+              <div class="slide-3">
+                <img class="big-icecream" src="img/ice-cream-big-3.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
+                <div class="big-ad-name">
+                  <h2 class="big-ad-title">Пломбир с помадкой и клубничный щербет</h2>
+                  <a class="button big-ad-button" href="#">Давайте оба!</a>
+                </div>
+              </div>
+            </div>
+        </div>
       </section>
 
-      <section class="small-ad">
-        <h2 class="visually-hidden">Дополнительная реклама</h2>
-        <ul class="small-ad-list">
-          <li class="small-ad-item">
+
+      <section class="additional-ad">
+        <div class="malinka">
+          <h2 class="visually-hidden">Малинка бесплатно</h2>
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш
                 заказ банку малинового варенья бесплатно.</p>
-            <img class="malinka" src="img/malina-background.jpg" width="560" height="229" alt="Малина">
             <a class="button small-ads-button" href="#">Хочу варенье!</a>
-          </li>
+       </div>
 
-          <li class="small-ad-item">
-            <h3>Шоколад даром!</h3>
-            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <img class="chocolate" src="img/chocolat-background.jpg" width="560" height="229" alt="Шоколадная присыпка">
-            <a class="button small-ads-button" href="#">Хочу шоколадки!</a>
-          </li>
-        </ul>
+       <div class="chocolat">
+          <h2 class="visually-hidden">Шоколад даром</h2>
+          <h3>Шоколад даром!</h3>
+          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+
+          <a class="button small-ads-button" href="#">Хочу шоколадки!</a>
+        </div>
       </section>
 
       <section class="hit-creams">
@@ -147,7 +147,7 @@
         <ul class="hit-creams-list">
           <li class="hit-creams-item">
             <a href="#">
-              <p><img src="img/hit.svg" alt="хит"></p>
+
               <!-- здесь мы договаривались вставить рисунок хит как псевдо элемент в css, но пока ничего не тргал -->
               <img src="img/hit-ice-cream-1.png" width="267" height="267" alt="Сливочное мороженое">
               <p class="hit-creams-price">310<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
@@ -157,7 +157,7 @@
 
           <li class="hit-creams-item">
             <a href="#">
-              <p><img src="img/hit.svg" alt="хит"></p>
+
               <img src="img/hit-ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное мороженое">
               <p class="hit-creams-price">380<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
               <p class="hit-creams-title">Сливочно-кофейное с кусочками шоколада</p>
@@ -166,7 +166,7 @@
 
           <li class="hit-creams-item">
             <a href="#">
-              <p><img src="img/hit.svg" alt="хит"></p>
+
               <img src="img/hit-ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное мороженое">
               <p class="hit-creams-price">355<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
               <p class="hit-creams-title">Сливочно-клубничное с присыпкой из белого шоколада</p>
@@ -175,7 +175,7 @@
 
           <li class="hit-creams-item">
             <a href="#">
-              <p><img src="img/hit.svg" alt="хит"></p>
+
               <img src="img/hit-ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле мороженое">
               <p class="hit-creams-price">415<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
               <p class="hit-creams-title">Сливочное крем-брюле с карамельной подливкой</p>
@@ -188,37 +188,40 @@
         <h2 class="visually-hidden">О Магазине Глейси</h2>
         <b class="shop-info-title">Магазин Глейси - это онлайн- и офлайн- магазин по продаже мороженого собственного производства на развес</b>
         <ul class="shop-info-list">
-
           <li class="shop-info-item">
-            <img src="img/icon-1" height="10" width="10" alt="иконка эскимо">
+            <img src="img/ice-cream.svg" height="49" width="49" alt="иконка эскимо">
             <p>Все наше мороженое изготовляется на собственном производстве, с использованием современного оборудования и проверенных временем технологий</p>
           </li>
           <li class="shop-info-item">
-            <img src="img/icon-2" height="10" width="10" alt="иконка лист">
+            <img src="img/eco.svg" height="49" width="49" alt="иконка лист">
             <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья</p>
           </li>
           <li class="shop-info-item">
-            <img src="img/icon-3" height="10" width="10" alt="иконка корова">
+            <img src="img/cow.svg" height="49" width="49" alt="иконка корова">
             <p>Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество</p>
           </li>
           <li class="shop-info-item">
-            <img src="img/icon-4" height="10" width="10" alt="иконка градусник">
+            <img src="img/thermometer.svg" height="49" width="49" alt="иконка градусник">
             <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус</p>
           </li>
         </ul>
       </section>
 
-      <section class="blog-news">
-        <h2 class="visually-hidden">Новости Блога</h2>
-        <p>Новое в нашем блоге</p>
-        <h3 class="blog-news-title"><a href="blog-news.html">10 способов сервировки фруктовых щербетов к столу</a></h3>
-        <img class="blog-news-image" src="img/blog-news-image.jpg" width="200" height="100" alt="клубничное мороженое">
-      </section>
+      <section class="blog">
+        <div class="blog-news">
+          <h2 class="visually-hidden">Новости Блога</h2>
+          <p>Новое в нашем блоге</p>
+          <h3 class="blog-news-title"><a href="blog-news.html">10 способов сервировки фруктовых щербетов к столу</a></h3>
+          <img class="blog-news-image" src="img/blog-news-image.jpg" width="200" height="100" alt="клубничное мороженое">
+        </div>
 
-      <section class="subscription">
-        <h2 class="visually-hidden">Рассылка</h2>
-        <p>Подпишитесь на нашу сладкую рассылку и будтее всегда в курсе всего самого вкусного что у нас происходит. Общаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <!--Здесь будет форма  -->
+        <div class="subscription">
+          <div class="white-background">
+            <h2 class="visually-hidden">Рассылка</h2>
+            <p>Подпишитесь на нашу сладкую рассылку и будтее всегда в курсе всего самого вкусного что у нас происходит. Общаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <!--Здесь будет форма  -->
+          </div>
+        </div>
       </section>
 
       <section class="location">
@@ -226,7 +229,7 @@
         <div class="location-image">
           <img src="img/map" width="500" height="500" alt="Карта с указанием локации">
         </div>
-        <img src="img/icon-1.svg" width="306" height="2092" alt="Иконка мороженого в вафельном стаканчике">
+        <img src="img/pin.svg" width="80" height="140" alt="Иконка мороженого в вафельном стаканчике">
         <div class="location-address">
           <p>Адрес главного офиса <br>и офлайн магазина:<br>
             <strong>ул.Большая Конюшенная<br>
@@ -244,19 +247,19 @@
     <footer class="main-footer">
       <div class="footer-social">
         <ul>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#" target="_blank"><img src="img/twitter.svg" alt="твитер"></a></li>
+          <li><a class="social-button" href="#" target="_blank"><img src="img/fb.svg" alt="фейсбук"></a></li>
+          <li><a class="social-button" href="#" target="_blank"><img src="img/instagram.svg" alt="инстаграм"></a></li>
+          <li><a class="social-button" href="#" target="_blank"><img src="img/vk.svg" alt="в контакте"></a></li>
         </ul>
       </div>
       <div class="sertification">
         <!-- убрал параграфы и добавл два блока div  -->
         <div class="footer-company-info">
           <a href="#">
-            <img src="img/heart-icon" width="100" height="100" alt="heart-icon">
+            <img src="img/heart.svg" width="15" height="13" alt="heart-icon">
             Для поставщиков
-          </a>
+          </a><br>
           <a href="#">О производстве</a>
         </div>
         <div class="footer-company-info">
@@ -266,7 +269,7 @@
       </div>
       <p class="footer-copyright">
 
-        <a class="button" href="https://htmlacademy.ru"><img src="img/htmlAcademyIcon.svg" alt="html Academy"></a><br>
+        <a class="button" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="html Academy"></a><br>
         <span>Сделано в HTML Academy &copy; 2017</span> //ссылка
       </p>
     </footer>
