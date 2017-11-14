@@ -1,13 +1,42 @@
 
-body {
-  margin: auto;
-  background-color: rgb(132, 157, 143);
-  width: 1200px;
+@font-face {
+  font-family: roboto;
+  src: url("../fonts/roboto.woff");
+}
 
+@font-face {
+  font-family: robotobold;
+  src: url("../fonts/robotobold.woff");
+}
+
+@font-face {
+  font-family: robotomedium;
+  src: url("../fonts/robotomedium.woff");
+}
+
+
+
+body {
+  font-family: "roboto", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+
+
+  width: 1200px;
+  margin: 0;
+}
+
+.catalog-body {
+  background-image: url("../img/lightning-background-catalog.png");
+}
+
+.body {
+  position: relative;
 }
 
 .main-header {
   display: inline-flex;
+  position: absolute;
 }
 
 .site-navigation {
@@ -22,41 +51,38 @@ body {
   display: inline-flex;
 }
 
+.breadcrumps li {
+  display: inline-flex;
+}
+
 .container {
   margin-left: 25px;
 }
 
 .big-ad {
     width: 1045px;
+    height: 811px;
     margin: auto;
     color: #fff;
     position: relative;
-
+    top: 0;
 }
 
-.slider{
-    overflow: hidden;
-    position: relative;
-}
-
-.slider-slides {
-  width: 300%;
-  font-weight: bold;
-  font-size: 35px;
-  text-align: center;
-  }
-
-.slide {
-  position: relative;
+.slider {
   width: 1045px;
-  float: left;
+  height: 811px;
+  position: relative;
+  display: block;
+  margin-bottom: 800px;
 }
 
 .big-ad-name {
   position: absolute;
-  top: 40%
-
+  top: 70%;
+  left: 200px;
 }
+
+
 
 .slider-controls {
   position: absolute;
@@ -74,7 +100,15 @@ body {
     border-radius: 50%;
 }
 
-.slider-slides {
+.slider-slides .slide-2 {
+  position: absolute;
+  top: 0;
+  display: flex;
+}
+
+.slider-slides .slide-3 {
+  position: absolute;
+  top: 0;
   display: flex;
 }
 
@@ -94,17 +128,29 @@ body {
   display: none;
 }
 
-#btn-1:checked ~ .big-ad .slider .slider-slides .slide-1 {
-  display: inline-block;
+#btn-1:checked ~ .slider-slides .slide-1 {
+    display: flex;
 }
-#btn-2:checked ~ .big-ad .slider .slider-slides .slide-2{
-    display: inline-block;
+#btn-2:checked ~ .slider-slides .slide-2{
+    display: flex;
 }
-#btn-3:checked ~ .big-ad .slider .slider-slides .slide-3{
-    display: inline-block;
+#btn-3:checked ~ .slider-slides .slide-3{
+    display: flex;
 }
 
-.container input[type=radio] {
+#btn-1:checked ~ .body {
+  background-color: rgb(132, 157, 143);
+}
+#btn-2:checked ~ .body {
+  background-color: rgb(137, 150, 166);
+}
+#btn-3:checked ~ .body {
+  background-color: rgb(157, 139, 132);
+}
+
+
+
+body input[type=radio] {
   display: none;
 }
 
@@ -153,7 +199,7 @@ li {
   background: url("../img/hit.svg") no-repeat;
   width: 61px;
   height: 61px;
-  display: block;
+  display: flex;
   position: absolute;
   left: 5px;
   top: 5px;

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: roboto;
+  src: url("../fonts/roboto.woff");
+}
+
+@font-face {
+  font-family: robotobold;
+  src: url("../fonts/robotobold.woff");
+}
+
+@font-face {
+  font-family: robotomedium;
+  src: url("../fonts/robotomedium.woff");
+}
+
+body {
+  font-family: roboto;
+  margin: auto;
+  background-color: rgb(132, 157, 143);
+  width: 1200px;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.main-header {
+  display: inline-flex;
+}
+
+.site-navigation {
+  display: inline-flex;
+}
+
+.site-navigation li {
+  margin-left: 10px;
+}
+
+.user-actions {
+  display: inline-flex;
+}
+
+.breadcrumps li {
+  display: inline-flex;
+}
+
+
+
+
+
+.main-footer {
+  display: inline-flex;
+}
+
+.footer-social {
+  width: auto;
+}
+
+.footer-social li {
+  display: inline-block;
+}
+
+.sertification {
+  display: flex;
+}
+
+.footer-company-info {
+  width: 220px;
+  margin-left: 50px;
+}
