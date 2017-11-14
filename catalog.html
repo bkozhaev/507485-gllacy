@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy Catalog</title>
-    <link rel="stylesheet" href="/css/catalog.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
+
+
   <body class="catalog-body">
     <!-- вставил header с index.html -->
     <header class="main-header">
@@ -15,16 +17,15 @@
         <ul class="site-navigation">
           <li class="site-navigation-current">
             <a href="catalog.html">Каталог</a>
-
-              <!-- добавил выпадающий список в каталог  -->
-              <ul class="site-navigation-submenu">
-                    <li class="submenu-item"><a href="#">Новинки</a></li>
-                    <li><hr class="submenu-line"></li>
-                    <li class="submenu-item"><a href="#">Сливочное</a></li>
-                    <li class="submenu-item-current"><a href="#">Щербеты</a></li>
-                    <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
-                    <li class="submenu-item"><a href="#">Мелорин</a></li>
-              </ul>
+            <!-- добавил выпадающий список в каталог  -->
+            <ul class="site-navigation-submenu">
+              <li class="submenu-item"><a href="#">Новинки</a></li>
+              <li><hr class="submenu-line"></li>
+              <li class="submenu-item"><a href="#">Сливочное</a></li>
+              <li class="submenu-item-current"><a href="#">Щербеты</a></li>
+              <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
+              <li class="submenu-item"><a href="#">Мелорин</a></li>
+            </ul>
           </li>
           <li>
             <a href="delivery.svg">Доставка и олпата
@@ -36,7 +37,7 @@
 
       <ul class="user-actions">
         <!-- переделал ссылки в кнопки -->
-        <li class="user-actions-search">
+        <li>
           <button name="loupe" type="button">
             <img src="img/loupe.svg" width="17" height="17" alt="loupe">
           </button>
@@ -44,50 +45,36 @@
           <!-- вставил выпадающее меню под кнопку  -->
           <section class="modal modal-search">
             <h2 class="visually-hidden">Поиск по сайту</h2>
-            <!-- Здесь будет форма -->
+            <form class="search" action="index.html" method="post">
+              <input type="text" name="search" placeholder="Что ищем?">
+            </form>
           </section>
         </li>
 
-        <li class="user-actions-entrance">
+        <li>
           <button name="entrance" type="button">
             <img src="img/entrance.svg" width="21" height="19" alt="entrance">
             Вход
           </button>
           <section class="modal modal-login">
             <h2 class="visually-hidden">Меню регистрации</h2>
-            <a href="#">Забыли пароль?</a>
-            <a href="#">Новая регистрация</a>
+
+            <form class="" action="index.html" method="post">
+              <p>
+                <input type="text" name="email" placeholder="Электронная почта">
+              </p>
+              <p>
+                <input type="text" name="password" placeholder="Пароль">
+              </p>
+              <button type="button" name="entrance">Войти</button>
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
+            </form>
+
             <!--Здесь будет форма  -->
           </section>
         </li>
-        <li class="user-actions-basket"><button name="basket" type="button"><img src="img/basket-red.svg" alt="basket">2 товара</button>
-          <div class="user-actions-basket-orders">
-            <div class="user-actions-basket-orders-one">
-              <a href="#">
-                <button type="button" name="form-close"><img src="img/cross-big.svg" width="11" height="11" alt=""></button>
-                <img src="img/ice-cream-small-orange.png" alt="ice-cream-orange">
-                <span>Пломбир с апельсиновым джемом</span>
-                <span>1,5 кг Х 200 руб.</span>
-                <span>300 руб.</span>
-              </a>
-            </div>
-
-            <div class="user-actions-basket-orders-two">
-              <a href="#">
-                <button type="button" name="form-close"><img src="img/cross-big.svg" width="11" height="11" alt=""></button>
-                <img src="img/ice-cream-small-strawberry.png" alt="ice-cream-strawberry">
-                <span>Клубничный пломбир с присыпкой из белого шоколада</span>
-                <span>1,5 кг Х 300 руб.</span>
-                <span>450 руб.</span>
-              </a>
-            </div>
-            <div class="user-actions-basket-total">
-              <hr>
-              <span>Итого: 750 руб.</span>
-              <button type="button" name="button-make-order">Оформить заказ</button>
-            </div>
-          </div>
-        </li>
+        <li><button name="basket" type="button"><img src="img/basket.svg" alt="basket">Пусто</button></li>
       </ul>
 
       <div class="header-contact">
@@ -110,6 +97,59 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр сортов мороженого</h2>
+        <form class="filter" action="index.html" method="get">
+          <fieldset>
+            <legend>Сливочное мороженое</legend>
+
+            <div class="filter filter-popularity-select">
+              <p>Сортировка:</p>
+              <select id="ice-cream-sort" class="ice-csream-sort" name="sort">
+                <option value="" selected>по популярности</option>
+                <option value="">сначала недорогие</option>
+                <option value="">сначала дорогие</option>
+                <option value="">по жирности</option>
+              </select>
+            </div>
+
+            <div class="filter filter-price-range">
+              <p>Цена 100 руб. - 500 руб.</p>
+                <input class="visually-hidden filter-range" type="range" name="price-range-1" value="120" min="100" max="500">
+                <input class="visually-hidden filter-range"type="range" name="price-range-2" value="400" min="100" max="500">
+            </div>
+
+            <div class="filter filter-fat-radio ">
+              <p>Жирность</p>
+                <input class="visually-hidden" id="0" type="radio" name="fat-level" value="">
+                <input class="visually-hidden" id="10" type="radio" name="fat-level" value="" checked>
+                <input class="visually-hidden" id="30" type="radio" name="fat-level" value="">
+                <input class="visually-hidden" id="40" type="radio" name="fat-level" value="">
+                <div class="filter-fat-radio-labels">
+                  <label for="0">0%</label>
+                  <label for="10">до 10%</label>
+                  <label for="30">до 30%</label>
+                  <label for="40">выше 30%</label>
+                </div>
+            </div>
+
+            <div class="filter-fillers-checkbox">
+              <input class="visually-hidden" id="chocolat" type="checkbox" name="choco" value="" checked>
+              <label for="chocolat">Шоколадные</label>
+              <input class="visually-hidden" id="sugar" type="checkbox" name="sugar" value="" checked>
+              <label for="sugar">сахарные присыпки</label>
+              <input class="visually-hidden" id="fruits" type="checkbox" name="sugar" value="">
+              <label for="fruits">фрукты</label>
+              <input class="visually-hidden" id="syrup" type="checkbox" name="sugar" value="">
+              <label for="syrup">фрукты</label>
+              <input class="visually-hidden" id="jam" type="checkbox" name="sugar" value="">
+              <label for="jam">джемы</label>
+            </div>
+
+            <button type="submit" name="button">Применить</button>
+          </fieldset>
+
+
+
+        </form>
         <!-- Здесь будет форма  -->
       </section>
 
@@ -123,6 +163,11 @@
               <p class="ice-creams-price">310<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
               <p class="ice-creams-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
             </a>
+
+            <div class="hover-overlay">
+              <img src="img/overlay-hover.png" width="323" height="440" alt="">
+              <a class="button hover-overlay-button" href="#">Быстрый просмотр</a>
+            </div>
           </li>
 
           <li class="product-item">
@@ -256,11 +301,24 @@
       </p>
     </footer>
 
-    <section class="modal modal-feedback">
+    <section  class="modal modal-feedback">
       <h2 class="visually-hidden">Меню для вопросов</h2>
-      <h3>Мы обязательно вам ответим!</h3>
-      <!-- Здесь будет форма  -->
-      <p class="button button-close modal-feedback-button">Х</p>
+      <form class="feedback" action="index.html" method="post">
+        <h3>Мы обязательно вам ответим!</h3>
+        <p class="button button-close modal-feedback-button">
+          <button type="button" name="close">
+            <img src="img/cross-small.svg" alt="cross-big"></p>
+          </button>
+        <p>
+          <input type="text" name="name" placeholder="Как вас зовут?">
+        </p>
+        <p>
+          <input type="text" name="email-2" placeholder="Ваша почта для ответа?">
+        </p>
+        <p>
+          <textarea name="feedback" rows="8" cols="80" placeholder="Напишите что-нибудь...">Напишите что-нибудь...</textarea>
+        </p>
+      </form>
     </section>
 
   </body>

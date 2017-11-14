@@ -6,19 +6,6 @@
     <link rel="stylesheet" href="css/style.css">
 
   </head>
-  <body>
-    <input type="radio" id="btn-1" name="toggle" checked>
-    <input type="radio" id="btn-2" name="toggle" >
-    <input type="radio" id="btn-3" name="toggle" >
-
-    <div class="slider-controls">
-      <label for="btn-1"></label>
-      <label for="btn-2"></label>
-      <label for="btn-3"></label>
-    </div>
-
-
-
     <div class="body">
       <header class="main-header">
         <nav class="main-navigation">
@@ -28,24 +15,22 @@
           <ul class="site-navigation">
             <li>
               <a href="catalog.html">Каталог</a>
-
-                <!-- добавил выпадающий список в каталог  -->
-                <ul class="site-navigation-submenu">
-                      <li class="submenu-item"><a href="#">Новинки</a></li>
-                      <li><hr class="submenu-line"></li>
-                      <li class="submenu-item"><a href="#">Сливочное</a></li>
-                      <li class="submenu-item-current"><a href="#">Щербеты</a></li>
-                      <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
-                      <li class="submenu-item"><a href="#">Мелорин</a></li>
-                </ul>
-
+              <!-- добавил выпадающий список в каталог  -->
+              <ul class="site-navigation-submenu">
+                <li class="submenu-item"><a href="#">Новинки</a></li>
+                <li><hr class="submenu-line"></li>
+                <li class="submenu-item"><a href="#">Сливочное</a></li>
+                <li class="submenu-item-current"><a href="#">Щербеты</a></li>
+                <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
+                <li class="submenu-item"><a href="#">Мелорин</a></li>
+              </ul>
             </li>
-
             <li>
-              <a href="delivery.svg">Доставка и олпата
-              </a>
+              <a href="delivery.html">Доставка и олпата</a>
             </li>
-            <li><a href="about-company.svg">О Компании</a></li>
+            <li>
+              <a href="about-company.html">О Компании</a>
+            </li>
           </ul>
         </nav>
 
@@ -59,7 +44,9 @@
             <!-- вставил выпадающее меню под кнопку  -->
             <section class="modal modal-search">
               <h2 class="visually-hidden">Поиск по сайту</h2>
-              <!-- Здесь будет форма -->
+              <form class="search" action="index.html" method="post">
+                <input type="text" name="search" placeholder="Что ищем?">
+              </form>
             </section>
           </li>
 
@@ -70,8 +57,19 @@
             </button>
             <section class="modal modal-login">
               <h2 class="visually-hidden">Меню регистрации</h2>
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>
+
+              <form class="" action="index.html" method="post">
+                <p>
+                  <input type="text" name="email" placeholder="Электронная почта">
+                </p>
+                <p>
+                  <input type="text" name="password" placeholder="Пароль">
+                </p>
+                <button type="button" name="entrance">Войти</button>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </form>
+
               <!--Здесь будет форма  -->
             </section>
           </li>
@@ -121,9 +119,26 @@
                     <a class="button big-ad-button" href="#">Давайте оба!</a>
                   </div>
                 </div>
-
               </div>
           </div>
+
+          <ul class="slide-buttons">
+            <li>
+              <button type="button" name="button">
+                Слайд 1
+              </button>
+            </li>
+            <li>
+              <button type="button" name="button">
+                Слайд 2
+              </button>
+            </li>
+            <li>
+              <button type="button" name="button">
+                Слайд 3
+              </button>
+            </li>
+          </ul>
         </section>
 
 
@@ -223,7 +238,10 @@
             <div class="white-background">
               <h2 class="visually-hidden">Рассылка</h2>
               <p>Подпишитесь на нашу сладкую рассылку и будтее всегда в курсе всего самого вкусного что у нас происходит. Общаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-              <!--Здесь будет форма  -->
+              <form class="" action="index.html" method="post">
+                <input type="text" name="email-1" placeholder="Электронная почта">
+                <button type="submit" name="button">Отправить</button>
+              </form>
             </div>
           </div>
         </section>
@@ -280,9 +298,22 @@
 
       <section  class="modal modal-feedback">
         <h2 class="visually-hidden">Меню для вопросов</h2>
-        <h3>Мы обязательно вам ответим!</h3>
-        <!-- Здесь будет форма  -->
-        <p class="button button-close modal-feedback-button">Х</p>
+        <form class="feedback" action="index.html" method="post">
+          <h3>Мы обязательно вам ответим!</h3>
+          <p class="button button-close modal-feedback-button">
+            <button type="button" name="close">
+              <img src="img/cross-small.svg" alt="cross-big"></p>
+            </button>
+          <p>
+            <input type="text" name="name" placeholder="Как вас зовут?">
+          </p>
+          <p>
+            <input type="text" name="email-2" placeholder="Ваша почта для ответа?">
+          </p>
+          <p>
+            <textarea name="feedback" rows="8" cols="80" placeholder="Напишите что-нибудь...">Напишите что-нибудь...</textarea>
+          </p>
+        </form>
       </section>
     </div>
   </body>
