@@ -3,22 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy Shop Main</title>
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
   </head>
+
+  <body>
     <div class="body">
       <header class="main-header">
+        <a class="main-header-logo" href="#">
+          <img src="img/logo.svg" width="154" height="64" alt="Логотип «ГлейсиШоп»">
+        </a>
         <nav class="main-navigation">
-          <a class="main-header-logo" href="#">
-            <img src="img/logo.svg" width="154" height="64" alt="Логотип «ГлейсиШоп»">
-          </a>
           <ul class="site-navigation">
             <li>
               <a href="catalog.html">Каталог</a>
               <!-- добавил выпадающий список в каталог  -->
               <ul class="site-navigation-submenu">
                 <li class="submenu-item"><a href="#">Новинки</a></li>
-                <li><hr class="submenu-line"></li>
                 <li class="submenu-item"><a href="#">Сливочное</a></li>
                 <li class="submenu-item-current"><a href="#">Щербеты</a></li>
                 <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
@@ -45,7 +47,7 @@
             <section class="modal modal-search">
               <h2 class="visually-hidden">Поиск по сайту</h2>
               <form class="search" action="index.html" method="post">
-                <input type="text" name="search" placeholder="Что ищем?">
+                <input type="search" name="search" placeholder="Что ищем?">
               </form>
             </section>
           </li>
@@ -58,14 +60,14 @@
             <section class="modal modal-login">
               <h2 class="visually-hidden">Меню регистрации</h2>
 
-              <form class="" action="index.html" method="post">
+              <form  action="index.html" method="post">
                 <p>
-                  <input type="text" name="email" placeholder="Электронная почта">
+                  <input type="email" name="email" placeholder="Электронная почта">
                 </p>
                 <p>
-                  <input type="text" name="password" placeholder="Пароль">
+                  <input type="password" name="password" placeholder="Пароль">
                 </p>
-                <button type="button" name="entrance">Войти</button>
+                <button type="submit" name="entrance">Войти</button>
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
               </form>
@@ -73,7 +75,9 @@
               <!--Здесь будет форма  -->
             </section>
           </li>
-          <li><button name="basket" type="button"><img src="img/basket.svg" alt="basket">Пусто</button></li>
+          <li>
+            <a href="#"><img src="img/basket.svg" alt="basket">Пусто</a>
+          </li>
         </ul>
 
         <div class="header-contact">
@@ -96,7 +100,7 @@
         <section class="big-ad">
           <div class="slider">
               <div class="slider-slides">
-                <div class="slide-1">
+                <div class="slide">
                   <img class="big-ice-cream" src="img/ice-cream-big.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
                   <div class="big-ad-name">
                     <h2 class="big-ad-title">Крем-брюле  и пломбир с малиновым джемом</h2>
@@ -104,7 +108,7 @@
                   </div>
                 </div>
 
-                <div class="slide-2">
+                <div class="slide">
                   <img class="big-icecream" src="img/ice-cream-big-2.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
                   <div class="big-ad-name">
                     <h2 class="big-ad-title">Шоколадный пломбир и лимонный сорбет</h2>
@@ -112,7 +116,7 @@
                   </div>
                 </div>
 
-                <div class="slide-3">
+                <div class="slide">
                   <img class="big-icecream" src="img/ice-cream-big-3.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
                   <div class="big-ad-name">
                     <h2 class="big-ad-title">Пломбир с помадкой и клубничный щербет</h2>
@@ -239,7 +243,7 @@
               <h2 class="visually-hidden">Рассылка</h2>
               <p>Подпишитесь на нашу сладкую рассылку и будтее всегда в курсе всего самого вкусного что у нас происходит. Общаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <form class="" action="index.html" method="post">
-                <input type="text" name="email-1" placeholder="Электронная почта">
+                <input type="email" name="email-1" placeholder="Электронная почта">
                 <button type="submit" name="button">Отправить</button>
               </form>
             </div>
@@ -300,19 +304,21 @@
         <h2 class="visually-hidden">Меню для вопросов</h2>
         <form class="feedback" action="index.html" method="post">
           <h3>Мы обязательно вам ответим!</h3>
-          <p class="button button-close modal-feedback-button">
+
             <button type="button" name="close">
-              <img src="img/cross-small.svg" alt="cross-big"></p>
+              <img src="img/cross-small.svg" alt="cross-big">
             </button>
-          <p>
+
             <input type="text" name="name" placeholder="Как вас зовут?">
-          </p>
+
           <p>
-            <input type="text" name="email-2" placeholder="Ваша почта для ответа?">
+            <input type="email" name="email-2" placeholder="Ваша почта для ответа?">
           </p>
           <p>
             <textarea name="feedback" rows="8" cols="80" placeholder="Напишите что-нибудь...">Напишите что-нибудь...</textarea>
           </p>
+          <button type="submit" name="button">Отправить</button>
+
         </form>
       </section>
     </div>
