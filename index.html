@@ -16,69 +16,78 @@
         </a>
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li>
-              <a href="catalog.html">Каталог</a>
-              <!-- добавил выпадающий список в каталог  -->
-              <ul class="site-navigation-submenu">
-                <li class="submenu-item"><a href="#">Новинки</a></li>
-                <li class="submenu-item"><a href="#">Сливочное</a></li>
-                <li class="submenu-item-current"><a href="#">Щербеты</a></li>
-                <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
-                <li class="submenu-item"><a href="#">Мелорин</a></li>
-              </ul>
+            <li class="site-navigation-item site-navigation-item-has-children">
+                <a class="catalog-button" href="catalog.html">Каталог</a>
+                <!-- добавил выпадающий список в каталог  -->
+                <div class="site-navigation-frame">
+
+                <ul class="site-navigation-submenu">
+                  <li class="submenu-item"><a href="#">Новинки</a></li>
+                  <li class="submenu-item"><a href="#">Сливочное</a></li>
+                  <li class="submenu-item submenu-item-current"><a href="#">Щербеты</a></li>
+                  <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
+                  <li class="submenu-item"><a href="#">Мелорин</a></li>
+                </ul>
+                </div>
+
             </li>
-            <li>
+            <li class="site-navigation-item">
               <a href="delivery.html">Доставка и олпата</a>
             </li>
-            <li>
+            <li class="site-navigation-item">
               <a href="about-company.html">О Компании</a>
             </li>
           </ul>
+
+
+          <ul class="user-actions">
+            <!-- переделал ссылки в кнопки -->
+            <li>
+
+              <button class="button-search" type="button" name="button">
+                  <!-- картинку вставить  -->
+              </button>
+
+
+              <!-- вставил выпадающее меню под кнопку  -->
+              <section class="modal modal-search">
+                <h2 class="visually-hidden">Поиск по сайту</h2>
+                <form class="search" action="index.html" method="post">
+                  <input id="search-field" type="search" name="search" placeholder="Что ищем?">
+                  <label class="label-search" for="search-field"></label>
+                </form>
+              </section>
+            </li>
+
+            <li>
+              <button class="entrance-button" type="button" name="button">
+                Вход
+              </button>
+              <section class="modal modal-login">
+                <h2 class="visually-hidden">Меню регистрации</h2>
+
+                <form  action="index.html" method="post">
+                  <input id="entrance-field-email" type="email" name="email" placeholder="Электронная почта">
+                  <input id="entrance-field-password" type="password" name="password" placeholder="Пароль">
+                  <div class="button-and-link">
+                    <button id="entrance-submit-button" type="submit" name="entrance">Войти</button>
+                    <div class="modal-login-links">
+                      <a href="#">Забыли пароль?</a> <br>
+                      <a href="#">Новая регистрация</a>
+                    </div>
+                  </div>
+                </form>
+
+                <!--Здесь будет форма  -->
+              </section>
+            </li>
+            <li >
+              <button class="basket-button" type="button" name="button">
+                Пусто
+              </button>
+            </li>
+          </ul>
         </nav>
-
-        <ul class="user-actions">
-          <!-- переделал ссылки в кнопки -->
-          <li>
-            <button name="loupe" type="button">
-              <img src="img/loupe.svg" width="17" height="17" alt="loupe">
-            </button>
-
-            <!-- вставил выпадающее меню под кнопку  -->
-            <section class="modal modal-search">
-              <h2 class="visually-hidden">Поиск по сайту</h2>
-              <form class="search" action="index.html" method="post">
-                <input type="search" name="search" placeholder="Что ищем?">
-              </form>
-            </section>
-          </li>
-
-          <li>
-            <button name="entrance" type="button">
-              <img src="img/entrance.svg" width="21" height="19" alt="entrance">
-              Вход
-            </button>
-            <section class="modal modal-login">
-              <h2 class="visually-hidden">Меню регистрации</h2>
-
-              <form  action="index.html" method="post">
-                <p>
-                  <input type="email" name="email" placeholder="Электронная почта">
-                </p>
-                <p>
-                  <input type="password" name="password" placeholder="Пароль">
-                </p>
-                <button type="submit" name="entrance">Войти</button>
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>
-              </form>
-
-              <!--Здесь будет форма  -->
-            </section>
-          </li>
-          <li>
-            <a href="#"><img src="img/basket.svg" alt="basket">Пусто</a>
-          </li>
-        </ul>
 
         <div class="header-contact">
           <!-- добавил breadcrumps со второй страницы в header -->
