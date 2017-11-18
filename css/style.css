@@ -36,6 +36,7 @@ a {
   flex-wrap: wrap;
   margin: auto;
   position: absolute;
+  z-index: 200;
 }
 
 .main-navigation {
@@ -368,22 +369,42 @@ a {
   list-style: none;
 }
 
+
+.slide {
+  position: relative;
+  width: 1045px;
+  height: 881px;
+}
+
+.slide-1 {
+  background: url("../img/ice-cream-big.png") no-repeat;
+}
+
+.slide-2 {
+  background: url("../img/ice-cream-big-2.png") no-repeat;
+}
+
+.slide-3 {
+  background: url("../img/ice-cream-big-3.png") no-repeat;
+}
+
 .big-ad-title {
-  font-size: 60.468px;
+  display: block;
+  font-size: 60px;
   font-family: "Roboto";
   color: rgb(255, 255, 255);
   font-weight: bold;
-  line-height: 1.006;
+  line-height: 60.35px;
   text-align: center;
   -moz-transform: matrix( 0.99225231474236,0,0,0.99225231474236,0,0);
   -webkit-transform: matrix( 0.99225231474236,0,0,0.99225231474236,0,0);
   -ms-transform: matrix( 0.99225231474236,0,0,0.99225231474236,0,0);
   position: absolute;
-  left: 199.657px;
-  top: 451.681px;
-  width: 669.711px;
-  height: 116.821px;
-  z-index: 48;
+  width: 665px;
+  height: 116px;
+  left: 268px;
+  top: 400px;
+  margin: 0 auto;
 }
 
 .big-ad-button{
@@ -396,15 +417,33 @@ a {
   border-radius: 30px;
   width: 280px;
   height: 64px;
-  z-index: 40;
   color: #fff;
-  font-family: "Robotobold";
+  font-family: "Roboto";
+  font-weight: bold;
   font-size: 32px;
   line-height: 64px;
   text-align: center;
   vertical-align: middle;
-  left: 50%;
+  top: 560px;
+  left: 460px;
+  margin 0 auto;
 }
+
+.big-ad-button:hover {
+  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+}
+
+
+.big-ad-button:active {
+  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
 .slide-buttons li{
   display: inline-flex;
   list-style: none;
@@ -422,7 +461,6 @@ a {
   cursor: pointer;
 }
 
-
 .slide-buttons button:focus {
   background-color: rgb(255, 255, 255);
   border: 2px solid white;
@@ -435,73 +473,91 @@ a {
   cursor: pointer;
 }
 
-
-
-
 .visually-hidden {
   display: none;
 }
 
-.malinka {
-  background: url("../img/malina-background.jpg") no-repeat;
+.small-ads-banner {
+  display: inline-block;
+  justify-content: space-between;
   background-size: 560px, 229px;
   border-radius: 15px;
   color: #fff;
   width: 560px;
   height: 229px;
   position: relative;
+  margin: 0;
 }
 
-.malinka h3 {
-  font-size: 23px;
+.small-ads-banner h3 {
+  font-size: 35px;
   font-family: "Roboto";
   color: rgb(255, 255, 255);
   font-weight: bold;
   text-align: left;
   position: absolute;
-  height: 22px;
   left: 20px;
   top: 20px;
-  border: 1px solid red;
+  margin: 0 auto;
 }
 
-.malinka p {
+.small-ads-banner p {
   display: block;
-  font-size: 12px;
+  font-size: 18px;
   font-family: "Roboto";
   color: rgb(255, 255, 255);
   font-weight: bold;
   line-height: 1.222;
   text-align: left;
   position: absolute;
-  width: inherit;
+  width: 510px;
   top: 70px;
   left: 20px;
+  margin: 0 auto;
 }
 
 .small-ads-button {
   background-image: -moz-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
-  opacity: 0.988;
   box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
   position: absolute;
-  width: 165px;
-  height: 46px;
-}
-
-}
-
-
-
-.chocolat {
-  background: url("../img/chocolat-background.jpg") no-repeat;
-  background-size: 560px, 229px;
-  border-radius: 15px;
+  width: 167px;
+  height: 49px;
+  line-height: 49px;
+  border-radius: 30px;
+  text-align: center;
   color: #fff;
-  width: 560px;
-  height: 229px;
-  margin-left: 25px;
+  vertical-align: middle;
+  font-size: 18px;
+  font-weight: bold;
+  right: 10px;
+  bottom: 25px;
+  display: block;
+}
+
+.small-ads-button:hover {
+  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+}
+
+.small-ads-button:active {
+  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
+
+
+
+.malinka {
+    background: url("../img/malina-background.jpg") no-repeat;
+}
+.chocolat {
+    background: url("../img/chocolat-background.jpg") no-repeat;
 }
 
 .hit-creams-list {
@@ -513,6 +569,8 @@ a {
   width: 267px;
   height: 267px;
   margin-right: 25px;
+  list-style: none;
+  margin: 0 auto;
 }
 
 
@@ -526,6 +584,31 @@ a {
   left: 5px;
   top: 5px;
 }
+
+.hit-creams-price {
+  display: block;
+  font-size: 45px;
+  font-family: "Roboto";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 45px;
+  text-align: left;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  position: absolute;
+  text-align: center;
+  top: 215px;
+  margin: 0 auto;
+}
+
+.hit-creams-price img {
+  display: inline-block;
+  width: 30px;
+  height: 35px;
+  line-height: 45px;
+  vertical-align: middle;
+  margin: 0 2px 0 2px;
+}
+
 
 .shop-info {
   background: url("../img/wafer.jpg");
