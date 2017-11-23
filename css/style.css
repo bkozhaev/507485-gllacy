@@ -15,14 +15,15 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: #323232;
   background: rgb(132, 157, 143);
+  max-width: 1200px;
+  min-width: 900px;
 }
 
 a {
@@ -31,7 +32,7 @@ a {
 
 .main-header{
   width: 1200px;
-  margin: 0;
+  margin: 0 auto;
   position: fixed;
   z-index: 200;
   top: 0;
@@ -1163,6 +1164,16 @@ input[type="radio"]:checked {
   width: 142px;
 }
 
+.filter-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+}
+
+.filter-button:active {
+  background-color: rgb(237, 237, 237);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.4);
+}
+
 .filters-input-range {
   position: relative;
   width: 702px;
@@ -1197,4 +1208,25 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked {
   background: url("../img/checkbox-on.svg") no-repeat;
+}
+
+.product {
+  position: relative;
+}
+
+.pagination-list-div {
+  display: block
+  position: absolute;
+  width: 1200px;
+  border: 1px solid red;
+  right: 0;
+}
+
+.pagination-list {
+  display: flex;
+  list-style: none;
+  width: 190px;
+  justify-content: space-between;
+  border: 1px solid red;
+  padding: 0;
 }
