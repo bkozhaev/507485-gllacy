@@ -33,7 +33,7 @@ a {
 .main-header{
   width: 1200px;
   margin: 0 auto;
-  position: fixed;
+
   z-index: 200;
   top: 0;
   left: 0;
@@ -146,6 +146,20 @@ a {
   height: 20px;
 }
 
+.space-between-button-and-modals {
+  position: relative;
+  top: 0;
+  width: 33px;
+  height: 20px;
+}
+
+.space-between-button-and-modals-1 {
+  position: relative;
+  top: 0;
+  width: 90px;
+  height: 20px;
+}
+
 .site-navigation-submenu {
   display: none;
   top: 10px;
@@ -244,6 +258,10 @@ a {
   display: block;
 }
 
+.space-between-button-and-modals:hover ~ .modal-search {
+  display: block;
+}
+
 .modal-search:hover {
   display: block;
 }
@@ -310,12 +328,17 @@ a {
   display: block;
 }
 
+.space-between-button-and-modals-1:hover ~ .modal-login {
+  display: block;
+}
+
 .modal-login:hover {
   display: block;
 }
 
 .modal-login {
     display: none;
+    position: relative;
     border-radius: 6px;
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -324,55 +347,51 @@ a {
     height: 214px;
     padding: 0;
     right: 0;
+    z-index: 100;
 }
 
 #entrance-field-email {
+  position: absolute;
+  top: 20px;
+  left: 19px;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(211, 211, 210);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
-  margin: 15px;
-  width: 245px;
-  height: 48px;
-  z-index: 259;
+  width: 241px;
+  height: 44px;
 }
 
 #entrance-field-password {
+  position: absolute;
+  top: 84px;
+  left: 19px;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(211, 211, 210);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
-  width: 245px;
-  height: 48px;
-  z-index: 257;
-  margin: 0 15px 0 15px;
+  width: 241px;
+  height: 44px;
 }
 
-#entrance-submit-button {
-  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
-  font-family: "Robotobold";
-  font-size: 18px;
-  vertical-align: middle;
-  border-radius: 50px;
-  color: #fff;
+.entrance-button-1 {
+  position: absolute;
+  display: block;
+  left: 19px;
+  top: 148px;
   border: none;
-  width: 100px;
-  height: 44px;
-  z-index: 254;
-
+  width: 102px;
+  height: 46px;
 }
 
 .modal-login-links {
-  display: inline-block;
-  margin-left: 100px;
+  position: absolute;
+  top: 153px;
+  left: 140px;
   text-decoration: underline;
   font-size: 13px;
-  margin: auto;
 }
 
 .basket-button{
@@ -437,8 +456,8 @@ a {
   background-image: -ms-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
   position: absolute;
-  width: 167px;
-  height: 49px;
+  width: 100;
+  height: 40;
   line-height: 49px;
   border-radius: 30px;
   text-align: center;
@@ -622,13 +641,45 @@ a {
   margin-bottom: 70px;;
 }
 
+.product-ice-cream {
+  display: block;
+  width: 267px;
+  height: 300px;
+  border: 1px solid red;
+}
+
 .product-item {
   position: relative;
   width: 267px;
-  height: 267px;
+  height: 320px;
   list-style: none;
   margin: 0;
   margin-right: 25px;
+}
+
+.button-hover-block {
+  border: none;
+  position: absolute;
+  width: 200px;
+  left: 45.9px;
+  top: 339px;
+}
+
+.product-item-hover-block {
+  display: none;
+  border-radius: 5px;
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: -13px;
+  top: 0;
+  width: 293px;
+  height: 405px;
+}
+
+
+.product-item:hover .product-item-hover-block{
+  display: block;
 }
 
 .hit-creams-item::before {
@@ -1210,23 +1261,149 @@ input[type="checkbox"]:checked {
   background: url("../img/checkbox-on.svg") no-repeat;
 }
 
-.product {
-  position: relative;
-}
 
-.pagination-list-div {
-  display: block
-  position: absolute;
-  width: 1200px;
-  border: 1px solid red;
-  right: 0;
-}
+
 
 .pagination-list {
   display: flex;
   list-style: none;
+  position: relative;
+  font-size: 16px;
+  font-family: "Robotomedium";
+  right: 0;
   width: 190px;
   justify-content: space-between;
-  border: 1px solid red;
   padding: 0;
+}
+
+.pagination-list li {
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 0;
+}
+
+.pagination-item-current {
+  background-color: #fff;
+}
+
+.pagination-list .pagination-item-current a {
+  color: #000;
+}
+
+.pagination-list li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-list li:hover a {
+  color: #fff;
+}
+
+.pagination-list li:focus {
+  background-color: #fff;
+}
+
+.pagination-button-forward {
+  background: url("../img/button-forward.png") no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  border: none;
+}
+
+.pagination-button-backward {
+  display: inline-block;
+  background: url("../img/button-backward.png") no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 0;
+  width: 26px;
+  height: 26px;
+  border: none;
+}
+
+.pagination-list a {
+  color: #fff;
+}
+
+.modal-feedback {
+  display: block;
+  position: relative;
+  width: 478px;
+  height: 443px;
+  background-color: #f8f7f4;
+}
+
+.modal-feedback-title {
+  font-size: 24px;
+  font-family: "Robotomedium";
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.feedback-input-name {
+  display: block;
+  position: absolute;
+  width: 267px;
+  height: 44px;
+  border: 1px solid rgb(178, 178, 178);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  top: 63px;
+  left: 24px;
+}
+
+.feedback-input-email {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(178, 178, 178);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 267px;
+  height: 44px;
+  top: 127px;
+  left: 24px;
+}
+
+.feedback-input-textarea {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(178, 178, 178);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 428px;
+  height: 155px;
+  top: 191px;
+  left: 24px;
+}
+
+.feedback-button {
+  border: none;
+  position: absolute;
+  top: 372px;
+  left: 315px;
+  width: 141px;
+  height: 47px;
+}
+
+.close-button {
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  top: 15px;
+  left: 443px;
+
 }

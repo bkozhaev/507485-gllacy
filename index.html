@@ -50,9 +50,8 @@
               <button class="button-search" type="button" name="button">
                   <!-- картинку вставить  -->
               </button>
-
-
-              <!-- вставил выпадающее меню под кнопку  -->
+              <div class="space-between-button-and-modals">
+              </div>
               <section class="modal modal-search">
                 <h2 class="visually-hidden">Поиск по сайту</h2>
                 <form class="search" action="index.html" method="post">
@@ -66,6 +65,8 @@
               <button class="entrance-button" type="button" name="button">
                 Вход
               </button>
+              <div class="space-between-button-and-modals-1">
+              </div>
               <section class="modal modal-login">
                 <h2 class="visually-hidden">Меню регистрации</h2>
 
@@ -73,7 +74,7 @@
                   <input id="entrance-field-email" type="email" name="email" placeholder="Электронная почта">
                   <input id="entrance-field-password" type="password" name="password" placeholder="Пароль">
                   <div class="button-and-link">
-                    <button id="entrance-submit-button" type="submit" name="entrance">Войти</button>
+                    <button class="middle-button entrance-button-1" id="entrance-submit-button" type="submit" name="entrance">Войти</button>
                     <div class="modal-login-links">
                       <a href="#">Забыли пароль?</a> <br>
                       <a href="#">Новая регистрация</a>
@@ -316,21 +317,21 @@
       <section  class="modal modal-feedback">
         <h2 class="visually-hidden">Меню для вопросов</h2>
         <form class="feedback" action="index.html" method="post">
-          <h3>Мы обязательно вам ответим!</h3>
+          <h3 class="modal-feedback-title">Мы обязательно вам ответим!</h3>
 
-            <button type="button" name="close">
-              <img src="img/cross-small.svg" alt="cross-big">
+            <button class="close-button" type="button" name="close">
+              <img src="img/Х-big.svg" alt="cross-big">
             </button>
 
-            <input type="text" name="name" placeholder="Как вас зовут?">
+            <input class="feedback-input-name" type="text" name="name" placeholder="Как вас зовут?">
 
           <p>
-            <input type="email" name="email-2" placeholder="Ваша почта для ответа?">
+            <input class="feedback-input-email" type="email" name="email-2" placeholder="Ваша почта для ответа?">
           </p>
           <p>
-            <textarea name="feedback" rows="8" cols="80" placeholder="Напишите что-нибудь...">Напишите что-нибудь...</textarea>
+            <textarea class="feedback-input-textarea" name="feedback" rows="8" cols="80" placeholder="Напишите что-нибудь...">Напишите что-нибудь...</textarea>
           </p>
-          <button type="submit" name="button">Отправить</button>
+          <button class="middle-button feedback-button" type="submit" name="button">Отправить</button>
 
         </form>
       </section>
