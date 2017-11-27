@@ -618,6 +618,8 @@ a {
 }
 
 .small-ads-button {
+  width: 167px;
+  height: 49px;
   right: 10px;
   bottom: 25px;
 }
