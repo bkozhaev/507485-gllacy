@@ -16,46 +16,55 @@
 
 body {
   margin: 0 auto;
-  padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: #323232;
-  background: rgb(132, 157, 143);
-  max-width: 1200px;
-  min-width: 900px;
+  background: black;
+  width: 1200px;
 }
 
 a {
   text-decoration: none;
 }
 
+.body {
+  width: 1200px;
+  min-width: 900px;
+  background: rgb(132, 157, 143);
+}
+
 .main-header{
   width: 1200px;
+  min-height: 112px;
   margin: 0 auto;
-
+  position: fixed;
   z-index: 200;
-  top: 0;
-  left: 0;
 }
 
 .header-top {
   display: flex;
+  margin-left: 0 auto;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding-left: 27px;
+  padding-right: 27px;
+}
+
+.header-middle {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  padding-right: 27px;
 }
 
 .header-bottom{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
+  position: absolute;
+  top: 100px;
 }
 
-.breadcrumps {
-  align-self: flex-end;
-}
 
 .ad-contact {
   align-self: flex-end;
