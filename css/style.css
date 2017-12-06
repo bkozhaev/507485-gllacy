@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+.catalog-body {
+  background: rgb(132, 157, 143);
+}
+
 .body {
   width: 1200px;
   min-width: 900px;
@@ -40,7 +44,6 @@ a {
   margin: 0 auto;
   position: fixed;
   z-index: 200;
-  margin-bottom: 500px;
 }
 
 .header-top {
@@ -58,14 +61,14 @@ a {
   position: relative;
   justify-content: flex-end;
   padding-right: 27px;
-  margin-bottom: 200px;
 }
 
 .header-bottom{
   display: flex;
   position: absolute;
   top: 100px;
-  margin-bottom: 500px;
+  z-index: 200;
+  margin: 0;
 }
 
 
@@ -85,12 +88,8 @@ a {
   vertical-align: bottom;
 }
 
-/*.header-bottom {
-  margin-top: -60px;
-}*/
-
 .header-top-main {
-  display: inline-flex;
+  display: flex;
 }
 
 .main-navigation li{
@@ -101,36 +100,40 @@ a {
   font-size: 16px;
   line-height: 18px;
   color: #fff;
-
 }
 
 .site-navigation {
   position: relative;
   display: flex;
-  flex-wrap: nowrap;
   height: 32px;
   line-height: 32px;
   vertical-align: middle;
   padding: 0;
-  width: 351px;
+  width: 366px;
   justify-content: space-between;
-  /*width: 800px;*/
 }
 
-.site-navigation-item-has-children .catalog-button{
+.site-naviation-item-current {
+  background-color:
+}
+
+.site-navigation-item {
+  padding-left: 7px;
+  padding-right: 7px;
   display: block;
-  width: 82px;
   line-height: 32px;
   border-radius: 15px;
   text-align: center;
   vertical-align: middle;
-  position: relative;
 }
 
-.catalog-button:hover {
+.site-navigation-item:hover{
   background-color: #fff;
+  font-weight: bold;
+}
+
+.site-navigation-item:hover a {
   color: #000;
-  font-family: "Robotobold";
 }
 
 
@@ -162,14 +165,14 @@ a {
   position: relative;
   top: 0;
   width: 33px;
-  height: 20px;
+  height: 10px;
 }
 
 .space-between-button-and-modals-1 {
   position: relative;
   top: 0;
   width: 90px;
-  height: 20px;
+  height: 10px;
 }
 
 .site-navigation-submenu {
@@ -181,18 +184,21 @@ a {
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   position: absolute;
   left: 0;
+  text-align: left;
   width: 143px;
   text-indent: 10px;
   font-size: 14px;
+  z-index: 400;
 }
 
 .site-navigation-submenu .main-item::after {
   width: 91.5%;
   display: block;
   content: "";
-  height: 1px;
+  height: 2px;
   background-color: rgba(0, 0, 0, 0.2);
   margin: 0 auto;
+  z-index: 300;
 }
 
 .site-navigation-submenu .main-item {
@@ -206,15 +212,21 @@ a {
 }
 
 .site-navigation-submenu li:hover {
-  background-color: #fbded7;
+  background-color: #fbded8;
 }
+
+
 
 .site-navigation-submenu li:active {
   background-color: #f6b5a5;
 }
 
-.site-navigation-submenu .submenu-item-current {
+.submenu-item-current {
   background-color: #d07058;
+}
+
+.submenu-item.submenu-item-current a{
+  color: #fff;
 }
 
 
@@ -232,12 +244,18 @@ a {
 }
 
 
+
+
 .user-actions {
   list-style: none;
   display: flex;
   justify-content: space-between;
   width: 267px;
   padding: 0;
+}
+
+.user-actions li {
+  justify-content: center;
 }
 
 .button-search {
@@ -439,10 +457,13 @@ a {
 }
 
 .breadcrumps{
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   list-style: none;
-  width: 220px;
+  padding: 0;
+  margin: 0;
+  padding-left: 27px;
+  width: 223px;
 }
 
 .breadcrumps a {
@@ -458,21 +479,8 @@ a {
 .container {
   margin: 0 auto;
   width: 1200px;
-  padding: 0 27px;
-
 }
 
-
-.slide {
-  position: absolute;
-  margin: 0 auto;
-  width: 1045px;
-  height: 881px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 
 .middle-button {
   background-image: -moz-linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
@@ -507,7 +515,22 @@ a {
   outline: none;
 }
 
+.big-ad {
+  position: relative;
+  width: 1045px;
+  height: 881px;
+  margin: 0 auto;
+}
 
+.big-ad-name {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 .big-ad-title {
   display: block;
@@ -520,12 +543,6 @@ a {
   -moz-transform: matrix( 0.99225231474236,0,0,0.99225231474236,0,0);
   -webkit-transform: matrix( 0.99225231474236,0,0,0.99225231474236,0,0);
   -ms-transform: matrix( 0.99225231474236,0,0,0.99225231474236,0,0);
-  position: absolute;
-  width: 665px;
-  height: 116px;
-  left: 268px;
-  top: 400px;
-  margin: 0 auto;
 }
 
 .big-ad-button{
@@ -533,11 +550,9 @@ a {
   background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
-  position: absolute;
   display: block;
   border-radius: 30px;
   width: 280px;
-  height: 64px;
   color: #fff;
   font-family: "Roboto";
   font-weight: bold;
@@ -545,9 +560,7 @@ a {
   line-height: 64px;
   text-align: center;
   vertical-align: middle;
-  top: 560px;
-  left: 460px;
-  margin 0 auto;
+  margin: 0 auto;
 }
 
 .big-ad-button:hover {
@@ -606,8 +619,11 @@ a {
 }
 
 .additional-ad {
-  display: inline-flex;
-  justify-content: space-around;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 27px;
+  padding-right: 27px;
+  margin-bottom: 38px;
 }
 
 .small-ads-banner {
@@ -663,23 +679,23 @@ a {
     background: url("../img/chocolat-background.jpg") no-repeat;
 }
 
+.hit-creams {
+  padding-left: 27px;
+  padding-right: 27px;
+  margin-bottom: 40px;
+}
+
 .hit-creams-list {
-  display: inline-flex;
-
-}
-
-.ice-cream-row {
-  display: inline-flex;
-  flex-basis: 1200px;
+  display: flex;
   justify-content: space-between;
-  margin-bottom: 70px;;
+  margin: 0;
+  padding: 0;
 }
 
-.product-ice-cream {
-  display: block;
-  width: 267px;
-  height: 300px;
-  border: 1px solid red;
+.product-list {
+  padding-left: 27px;
+  padding-right: 27px;
+  margin: 0 auto;
 }
 
 .product-item {
@@ -688,7 +704,20 @@ a {
   height: 320px;
   list-style: none;
   margin: 0;
-  margin-right: 25px;
+}
+
+.ice-cream-row {
+  display: flex;
+  flex-basis: 1200px;
+  justify-content: space-between;
+  margin-bottom: 38px;;
+}
+
+.product-ice-cream {
+
+  width: 267px;
+  height: 300px;
+  border: 1px solid red;
 }
 
 .button-hover-block {
@@ -709,6 +738,7 @@ a {
   top: 0;
   width: 293px;
   height: 405px;
+  z-index: 200;
 }
 
 
@@ -802,13 +832,14 @@ a {
 }
 
 .shop-info {
-  margin-top: 200px;
   position: relative;
   display: flex;
   background: url("../img/wafer.jpg");
   border-radius: 15px;
   width: 1146px;
   height: 306px;
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .shop-info-title {
@@ -892,8 +923,11 @@ a {
 }
 
 .blog {
-  display:inline-flex;
+  display: flex;
   justify-content: space-between;
+  padding-left: 27px;
+  padding-right: 27px;
+  margin-bottom: 40px;
 }
 
 .blog-news {
@@ -1001,6 +1035,7 @@ a {
   background: url("../img/map-background.jpg") no-repeat;
   width: 1200px;
   height: 430px;
+  margin-bottom: 35px;
 }
 
 .location img {
@@ -1042,20 +1077,22 @@ a {
 
 .main-footer a{
   color: #fff;
+
 }
 
 .main-footer {
   position: relative;
   display: flex;
-  width: 1200px;
   justify-content: space-around;
-  margin: 37px 0 0 0;
   color: #fff;
+  padding-left: 27px;
+  padding-right: 27px;
+  align-items: center;
 }
 
 .footer-social ul{
   display: flex;
-  width: 187px;
+  width: 185px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1295,7 +1332,13 @@ input[type="checkbox"]:checked {
   background: url("../img/checkbox-on.svg") no-repeat;
 }
 
-
+.pagination-list-div {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 27px;
+  padding-right: 27px;
+  margin-top: 95px;
+}
 
 
 .pagination-list {
@@ -1308,6 +1351,7 @@ input[type="checkbox"]:checked {
   width: 190px;
   justify-content: space-between;
   padding: 0;
+  margin: 0;
 }
 
 .pagination-list li {
@@ -1337,8 +1381,9 @@ input[type="checkbox"]:checked {
   color: #fff;
 }
 
-.pagination-list li:focus {
+.pagination-list li:active {
   background-color: #fff;
+  color: #000;
 }
 
 .pagination-button-forward {
@@ -1368,10 +1413,11 @@ input[type="checkbox"]:checked {
 
 .modal-feedback {
   display: block;
-  position: relative;
+  position: absolute;
   width: 478px;
   height: 443px;
   background-color: #f8f7f4;
+  margin: 0 auto;
 }
 
 .modal-feedback-title {
