@@ -263,10 +263,6 @@ a {
   padding: 0;
 }
 
-.user-actions li {
-  justify-content: center;
-}
-
 .button-search {
   display: block;
   width: 33px;
@@ -451,16 +447,16 @@ a {
 
 .basket-button-not-empty {
   display: block;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 1);
   background-image: url("../img/basket-red.svg");
   background-repeat: no-repeat;
-  background-position: 25px;
+  background-position: 20px;
   width: 117px;
   height: 32px;
   border-radius: 20px;
   border: none;
-  text-indent: 20px;
-  color: #fff;
+  text-indent: 40px;
+  color: #000;
   font-family: "Robotomedium";
   font-size: 14px;
 }
@@ -1554,5 +1550,41 @@ input[type="checkbox"]:checked {
   padding: 0;
   top: 15px;
   left: 443px;
+}
 
+.basket-submenu-close-button img {
+  display: block;
+  width: 11px;
+  height: 11px;
+}
+
+.basket-submenu {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.basket-submenu-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.basket-submenu-img {
+  display: block;
+}
+
+.basket-submenu-price {
+  display: block;
+}
+
+.basket-submenu-first-row {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  border: 1px solid red;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
