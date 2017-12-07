@@ -42,8 +42,12 @@ a {
   width: 1200px;
   min-height: 112px;
   margin: 0 auto;
-  position: fixed;
+  position: absolute;
   z-index: 200;
+}
+
+.main-header-catalog {
+  position: relative;
 }
 
 .header-top {
@@ -61,13 +65,14 @@ a {
   position: relative;
   justify-content: flex-end;
   padding-right: 27px;
+  margin-top: -25px;
 }
 
 .header-bottom{
   display: flex;
   position: absolute;
-  top: 100px;
-  z-index: 200;
+  top: 95px;
+  z-index: 1;
   margin: 0;
 }
 
@@ -114,7 +119,7 @@ a {
 }
 
 .site-naviation-item-current {
-  background-color:
+  background-color: red;
 }
 
 .site-navigation-item {
@@ -129,6 +134,9 @@ a {
 
 .site-navigation-item:hover{
   background-color: #fff;
+}
+
+.site-navigation-item:hover > a{
   font-weight: bold;
 }
 
@@ -149,7 +157,7 @@ a {
   display: block;
 }
 
-.site-navigation-item .catalog-button:active {
+.site-navigation-item:active {
     background-color: rgba(248, 247, 244, 0.988);
     box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.5);
 }
@@ -159,6 +167,7 @@ a {
   top: 0;
   width: 80px;
   height: 20px;
+  z-index: 100;
 }
 
 .space-between-button-and-modals {
@@ -166,6 +175,7 @@ a {
   top: 0;
   width: 33px;
   height: 10px;
+  z-index: 100;
 }
 
 .space-between-button-and-modals-1 {
@@ -173,6 +183,7 @@ a {
   top: 0;
   width: 90px;
   height: 10px;
+  z-index: 100;
 }
 
 .site-navigation-submenu {
@@ -188,7 +199,7 @@ a {
   width: 143px;
   text-indent: 10px;
   font-size: 14px;
-  z-index: 400;
+  z-index: 100;
 }
 
 .site-navigation-submenu .main-item::after {
@@ -242,9 +253,6 @@ a {
 .user-actions > li {
   position: relative;
 }
-
-
-
 
 .user-actions {
   list-style: none;
@@ -517,9 +525,10 @@ a {
 
 .big-ad {
   position: relative;
-  width: 1045px;
   height: 881px;
   margin: 0 auto;
+  margin-left: 27px;
+  margin-right: 27px;
 }
 
 .slide{
@@ -530,14 +539,20 @@ a {
   display: block;
 }
 
+.big-ice-cream-img {
+  display: block;
+  margin: 0 auto;
+}
+
 .big-ad-name {
   position: absolute;
-  bottom: 117px;
+  top: 410px;
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
   max-width: 1200px;
   margin: 0 auto;
+  width: 1045px;
 }
 
 .big-ad-title {
@@ -546,11 +561,13 @@ a {
   font-family: "Roboto";
   color: rgb(255, 255, 255);
   font-weight: bold;
-  line-height: 60.35px;
+  line-height: 55px;
   text-align: center;
   -moz-transform: matrix( 0.99225231474236,0,0,0.99225231474236,0,0);
   -webkit-transform: matrix( 0.99225231474236,0,0,0.99225231474236,0,0);
   -ms-transform: matrix( 0.99225231474236,0,0,0.99225231474236,0,0);
+  margin: 0;
+  margin-bottom: 35px;
 }
 
 .big-ad-button{
@@ -588,7 +605,7 @@ a {
 
 .slide-buttons {
 position: absolute;
-bottom: 50px;
+top: 580px;
 z-index: 1;
 }
 
@@ -639,6 +656,7 @@ z-index: 1;
   padding-left: 27px;
   padding-right: 27px;
   margin-bottom: 38px;
+  margin-top: -230px;
 }
 
 .small-ads-banner {
@@ -756,6 +774,9 @@ z-index: 1;
   z-index: 200;
 }
 
+.hit-creams-item:hover .product-item-hover-block {
+  display: block;
+}
 
 .product-item:hover .product-item-hover-block{
   display: block;
@@ -1147,34 +1168,48 @@ z-index: 1;
   left: -20px;
 }
 
+.filter-form {
+    max-width: 875px;
+
+}
+
 .filters {
-  display: inline-flex;
-  position: relative;
-  margin-top: 150px;
-  height: 130px;
+  padding-left: 27px;
+  padding-right: 27px;
+
+}
+
+.filter-title {
   padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 35px;
+  margin-bottom: 35px;
 }
 
 .filter-line {
   display: flex;
   position: relative;
-  width: 857px;
   justify-content: space-between;
 }
 
 .filter-line-1 {
-  position: absolute;
   top: 0;
   align-self: flex-start;
+  margin-bottom: 30px;
 }
 
 .filter-line-2 {
-  position: absolute;
   bottom: 0;
+  margin-bottom: 30px;
 }
 
 fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 legend {
