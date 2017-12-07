@@ -116,10 +116,11 @@ a {
   padding: 0;
   width: 366px;
   justify-content: space-between;
+  margin-left: 10px;
 }
 
-.site-naviation-item-current {
-  background-color: red;
+.site-navigation-item-current {
+  background-color: #d07058;
 }
 
 .site-navigation-item {
