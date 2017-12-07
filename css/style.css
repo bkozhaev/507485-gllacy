@@ -1124,8 +1124,6 @@ z-index: 1;
   display: flex;
   justify-content: space-between;
   color: #fff;
-  padding-left: 27px;
-  padding-right: 27px;
   align-items: baseline;
   padding-bottom: 40px;
 }
@@ -1672,4 +1670,15 @@ input::placeholder {
 
 .html-academy-link {
   margin-bottom: 5px;
+}
+
+.footer {
+  padding-left: 27px;
+  padding-right: 27px;
+}
+.footer-line {
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 27px;
+  background: #fff;
 }
