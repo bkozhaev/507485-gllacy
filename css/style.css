@@ -633,6 +633,12 @@ z-index: 1;
   cursor: pointer;
 }
 
+.slide-button-current {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid white;
+  outline: none;
+}
+
 .slide-buttons button:focus {
   background-color: rgb(255, 255, 255);
   border: 2px solid white;
