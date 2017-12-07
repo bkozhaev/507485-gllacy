@@ -85,25 +85,46 @@
               <!--Здесь будет форма  -->
             </section>
           </li>
-          <li >
+          <li class="basket-item">
             <button class="basket-button basket-button-not-empty" type="button" name="button">
               2 товара
             </button>
 
-            <div class="basket-submenu">
+            <form class="basket-submenu">
               <ul class="basket-submenu-list">
-                <li class="basket-submenu-first-row">
-                  <button class="basket-submenu-close-button" type="button" name="close-button">
-                    <img src="img/cross-big.svg" height="17" width="18" alt="cross">
-                  </button>
-                  <img class="basket-sumbenu-img" src="img/ice-cream-icon-1.gif" alt="">
-                  <p class="basket-submenu-price">1.5кг х 200 руб.</p>
-                  <p class="basket-submenu-price">300 руб.</p>
+                <li class="basket-submenu-line">
+                  <div class="basket-submenu-first-two-items">
+                    <button class="basket-submenu-close-button" type="button" name="close-button">
+                      <img src="img/cross-big.svg" height="17" width="18" alt="cross">
+                    </button>
+                    <img class="basket-submenu-img" src="img/ice-cream-icon-1.gif" alt="">
+                  </div>
+                  <div class="basket-submenu-text-items">
+                    <p class="basket-submenu-text basket-submenu-text-title">Пломбир с апельсиновым джемом</p>
+                    <p class="basket-submenu-text basket-submenu-text-price">1.5кг х 200 руб.</p>
+                    <p class="basket-submenu-text basket-submenu-text-price-totals">300 руб.</p>
+                  </div>
                 </li>
-                <li class="basket-submenu-second-row">
+                <li class="basket-submenu-line">
+                  <div class="basket-submenu-first-two-items">
+                    <button class="basket-submenu-close-button" type="button" name="close-button">
+                      <img src="img/cross-big.svg" height="17" width="18" alt="cross">
+                    </button>
+                    <img class="basket-submenu-img" src="img/ice-cream-icon-2.gif" alt="">
+                  </div>
+                  <div class="basket-submenu-text-items">
+                    <p class="basket-submenu-text basket-submenu-text-title">Клубничный пломбир с присыпкой из белого шоколада</p>
+                    <p class="basket-submenu-text basket-submenu-text-price">1.5кг х 300 руб.</p>
+                    <p class="basket-submenu-text basket-submenu-text-price-totals">450 руб.</p>
+                  </div>
                 </li>
               </ul>
-            </div>
+              <div class="basket-submenu-total-row">
+                <hr class="basket-submenu-hor-line">
+                <p class="basket-submenu-text-total">Итого: 750 руб.</p>
+                <button class="middle-button basket-submenu-button" type="submit" name="submenu-button">Оформить заказ</button>
+              </div>
+            </form>
           </li>
         </ul>
     </div>
@@ -371,7 +392,7 @@
     <!-- footer вставил с index.html  -->
     <footer class="main-footer">
       <div class="footer-social">
-        <ul>
+        <ul class="footer-social-list">
           <li><a class="social-button" href="#" target="_blank"><img src="img/twitter.svg" alt="твитер"></a></li>
           <li><a class="social-button" href="#" target="_blank"><img src="img/fb.svg" alt="фейсбук"></a></li>
           <li><a class="social-button" href="#" target="_blank"><img src="img/instagram.svg" alt="инстаграм"></a></li>
@@ -380,20 +401,17 @@
       </div>
       <div class="sertification">
         <div class="footer-company-info footer-company-info-heart">
-            <!-- <img src="img/heart.svg" width="15" height="13" alt="heart-icon"> -->
-          <a href="#">
-            Для поставщиков
-          </a><br>
+          <a href="#">Для поставщиков</a>
           <a href="#">О производстве</a>
         </div>
         <div class="footer-company-info">
-          <a href="#">Наши документы</a><br>
+          <a href="#">Наши документы</a>
           <a href="#">Экологические стандарты</a>
         </div>
       </div>
       <div class="footer-copyright">
 
-        <a class="button" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="html Academy"></a><br>
+        <a class="html-academy-link" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="html Academy"></a>
         <span>Сделано в HTML Academy &copy; 2017</span>
       </div>
     </footer>

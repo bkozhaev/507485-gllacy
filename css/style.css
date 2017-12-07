@@ -446,6 +446,7 @@ a {
 }
 
 .basket-button-not-empty {
+  position: relative;
   display: block;
   background-color: rgba(255, 255, 255, 1);
   background-image: url("../img/basket-red.svg");
@@ -459,6 +460,7 @@ a {
   color: #000;
   font-family: "Robotomedium";
   font-size: 14px;
+  padding-bottom: 5px;
 }
 
 .breadcrumps{
@@ -1120,14 +1122,15 @@ z-index: 1;
 .main-footer {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   color: #fff;
   padding-left: 27px;
   padding-right: 27px;
-  align-items: center;
+  align-items: baseline;
+  padding-bottom: 40px;
 }
 
-.footer-social ul{
+.footer-social-list{
   display: flex;
   width: 185px;
   list-style: none;
@@ -1137,12 +1140,22 @@ z-index: 1;
   align-items: flex-start;
 }
 
+.social-button {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.502);
+}
+
 .sertification {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
   width: 307px;
+}
+
+.sertification a {
+  margin-bottom: 5px;
 }
 
 .footer-company-info {
@@ -1151,8 +1164,6 @@ z-index: 1;
   font-size: 13px;
   line-height: 18px;
   text-align: left;
-  margin: 0;
-  padding: 0;
 }
 
 .footer-company-info-heart::before{
@@ -1403,6 +1414,7 @@ input[type="checkbox"]:checked {
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .pagination-list li {
@@ -1552,39 +1564,112 @@ input[type="checkbox"]:checked {
   left: 443px;
 }
 
-.basket-submenu-close-button img {
-  display: block;
-  width: 11px;
-  height: 11px;
-}
+
 
 .basket-submenu {
+  display: none;
+  right: 0;
+  top: 40px;
   position: absolute;
+  width: 540px;
   z-index: 1;
   background-color: #fff;
+  padding: 14px;
+  color: #323232;
+  font-size: 13px;
+  line-height: 16px;
+  border-radius: 5px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.basket-submenu-list {
+.basket-item {
+  padding-bottom: 20px;
+}
+
+.basket-item:hover .basket-submenu {
+  display: block;
+}
+
+.basket-submenu-first-two-items {
   display: flex;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+  justify-content: space-between;
+}
+
+.basket-submenu-text-items {
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
+.basket-submenu-text-title {
+  width: 255px;
+}
+
+.basket-submenu-text-price {
+  width: 122px;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.basket-submenu-text-total {
+  position: absolute;
+  font-weight: bold;
+  right: 14px;
+  font-size: 15px;
+}
+
+.basket-submenu-close-button {
+  background-color: transparent;
+  border: none;
+  width: 33px;
+  height: 33px;
+  margin-right: 10px;
 }
 
 .basket-submenu-img {
   display: block;
+  width: 33px;
+  height: 33px;
+  padding-right: 20px;
+}
+
+.basket-submenu-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .basket-submenu-price {
   display: block;
 }
 
-.basket-submenu-first-row {
+.basket-submenu-line {
   display: flex;
-  width: 300px;
-  justify-content: space-between;
-  border: 1px solid red;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  margin-bottom: 14px;
+}
+
+.basket-submenu-total-row {
+  height: 114px;
+}
+
+.basket-submenu-button {
+  line-height: inherit;
+  vertical-align: middle;
+  border: none;
+  width: 172px;
+  height: 46px;
+  bottom: 18px;
+  right: 14px;
+}
+
+input::placeholder {
+  padding-left: 20px;
+}
+
+.html-academy-link {
+  margin-bottom: 5px;
 }
