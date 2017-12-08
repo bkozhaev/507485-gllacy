@@ -534,7 +534,7 @@ a {
   display: none;
 }
 
-.slide.active{
+.active{
   display: block;
 }
 
@@ -640,6 +640,12 @@ z-index: 1;
 }
 
 .slide-buttons button:focus {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid white;
+  outline: none;
+}
+
+.slide-buttons button:active {
   background-color: rgb(255, 255, 255);
   border: 2px solid white;
   outline: none;
@@ -1048,6 +1054,7 @@ z-index: 1;
 }
 
 .subscription-email {
+  box-sizing: border-box;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(178, 178, 178);
@@ -1058,6 +1065,8 @@ z-index: 1;
   width: 368px;
   height: 44px;
   margin: 0;
+  padding: 10px 15px;
+  font-size: 16px;
 }
 
 .subscription-button {
@@ -1510,6 +1519,7 @@ input[type="checkbox"]:checked {
 }
 
 .feedback-input-name {
+  box-sizing: border-box;
   display: block;
   position: absolute;
   width: 267px;
@@ -1519,9 +1529,12 @@ input[type="checkbox"]:checked {
   background-color: rgb(255, 255, 255);
   top: 63px;
   left: 24px;
+  font-size: 16px;
+  padding: 10px 15px;
 }
 
 .feedback-input-email {
+  box-sizing: border-box;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(178, 178, 178);
@@ -1532,9 +1545,12 @@ input[type="checkbox"]:checked {
   height: 44px;
   top: 127px;
   left: 24px;
+  font-size: 16px;
+  padding: 10px 15px;
 }
 
 .feedback-input-textarea {
+  box-sizing: border-box;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(178, 178, 178);
@@ -1545,6 +1561,8 @@ input[type="checkbox"]:checked {
   height: 155px;
   top: 191px;
   left: 24px;
+  font-size: 16px;
+  padding: 10px 15px;
 }
 
 .feedback-button {
@@ -1668,9 +1686,9 @@ hr {
   right: 14px;
 }
 
-input::placeholder {
+/*input::placeholder {
   padding-left: 20px;
-}
+}*/
 
 .html-academy-link {
   margin-bottom: 5px;
@@ -1689,4 +1707,61 @@ input::placeholder {
 
 .modal-show {
   display: block;
+  animation: fadein 0.6s;
+}
+
+.modal-bounce {
+  display: flex;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+
+  70% {
+    transform: translateY(45%);
+  }
+
+  90% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    30% { opacity: 0.3}
+    60% { opacity:0.6; }
+    100% { opacity:1; }
 }

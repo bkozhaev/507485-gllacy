@@ -110,7 +110,7 @@
       <h1 class="visually-hidden">Глейси</h1>
       <section class="big-ad">
         <div class="slider">
-          <div class="slide active">
+          <div class="slide active slide-block-1">
               <img class="big-ice-cream-img" src="img/ice-cream-big.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
             <div class="big-ad-name">
               <h2 class="big-ad-title">Крем-брюле  и пломбир с малиновым джемом</h2>
@@ -118,7 +118,7 @@
             </div>
           </div>
 
-          <div class="slide">
+          <div class="slide slide-block-2">
             <img class="big-ice-cream-img" src="img/ice-cream-big-2.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
             <div class="big-ad-name">
               <h2 class="big-ad-title">Шоколадный пломбир и лимонный сорбет</h2>
@@ -126,7 +126,7 @@
             </div>
           </div>
 
-          <div class="slide">
+          <div class="slide slide-block-3">
             <img class="big-ice-cream-img" src="img/ice-cream-big-3.png" width="1045" height="881" alt="Крембрюле и пломбир с малиновым джемом">
             <div class="big-ad-name">
               <h2 class="big-ad-title">Пломбир с помадкой и клубничный щербет</h2>
@@ -138,17 +138,17 @@
         <div class="slide-buttons">
           <ul class="slide-button">
             <li>
-              <button class="slide-button-current" type="button" name="button">
+              <button class="slide-button-current slide-1" type="button" name="button">
                 Слайд 1
               </button>
             </li>
             <li>
-              <button type="button" name="button">
+              <button class="slide-2" type="button" name="button">
                 Слайд 2
               </button>
             </li>
             <li>
-              <button type="button" name="button">
+              <button class="slide-3" type="button slide-3" name="button">
                 Слайд 3
               </button>
             </li>
@@ -314,6 +314,7 @@
       </footer>
 
       <div class="modal-wrapper">
+        <div class="modal-wrapper-bounce">
         <section  class="modal modal-feedback">
           <h2 class="visually-hidden">Меню для вопросов</h2>
           <form class="feedback" action="index.html" method="post">
@@ -321,16 +322,17 @@
             <button class="close-button" type="button" name="close">
               <img src="img/Х-big.svg" alt="cross-big">
             </button>
-            <input class="feedback-input-name" type="text" name="name" placeholder="Как вас зовут?">
-            <p>
+            <input class="feedback-input-name" type="text" name="login" placeholder="Как вас зовут?" id="login-name">
+            <div>
               <input class="feedback-input-email" type="email" name="email-2" placeholder="Ваша почта для ответа?">
-            </p>
-            <p>
-              <textarea class="feedback-input-textarea" name="feedback" rows="8" cols="80" placeholder="Напишите что-нибудь...">Напишите что-нибудь...</textarea>
-            </p>
+            </div>
+            <div>
+              <textarea class="feedback-input-textarea" name="feedback" rows="8" cols="80" placeholder="Напишите что-нибудь..."></textarea>
+            </div>
             <button class="middle-button feedback-button" type="submit" name="button">Отправить</button>
           </form>
         </section>
+        </div>
       </div>
     </div>
 
