@@ -28,11 +28,14 @@ a {
   text-decoration: none;
 }
 
-.catalog-body {
+
+.body {
+  width: 1200px;
+  min-width: 900px;
   background: rgb(132, 157, 143);
 }
 
-.body {
+.body-wrapper {
   width: 1200px;
   min-width: 900px;
   background: rgb(132, 157, 143);
@@ -315,6 +318,7 @@ a {
 
 
 #search-field {
+  box-sizing: border-box;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(211, 211, 210);
@@ -325,6 +329,8 @@ a {
   width: 315px;
   height: 48px;
   z-index: 277;
+  padding: 10px 15px;
+  font-size: 16px;
 }
 
 .entrance-button {
@@ -386,6 +392,7 @@ a {
 }
 
 #entrance-field-email {
+  box-sizing: border-box;
   position: absolute;
   top: 20px;
   left: 19px;
@@ -396,9 +403,12 @@ a {
   background-color: rgb(255, 255, 255);
   width: 241px;
   height: 44px;
+  padding: 10px 15px;
+  font-size: 16px;
 }
 
 #entrance-field-password {
+  box-sizing: border-box;
   position: absolute;
   top: 84px;
   left: 19px;
@@ -409,6 +419,8 @@ a {
   background-color: rgb(255, 255, 255);
   width: 241px;
   height: 44px;
+  padding: 10px 15px;
+  font-size: 16px;
 }
 
 .entrance-button-1 {
@@ -505,6 +517,7 @@ a {
   font-size: 18px;
   font-weight: bold;
   display: block;
+  outline: none;
 }
 
 .middle-button:hover {
@@ -536,6 +549,7 @@ a {
 
 .active{
   display: block;
+  animation: fadein 2s;
 }
 
 .big-ice-cream-img {
@@ -623,10 +637,10 @@ z-index: 1;
   margin-right: 0;
 }
 
-.slide-buttons button {
+.slide-button-item {
   border: 2px solid white;
+  background-color: transparent;
   border-radius: 50%;
-  background-color: rgba(255, 0, 0, 0);
   width: 21px;
   height: 21px;
   text-indent: -9999px;
@@ -635,13 +649,11 @@ z-index: 1;
 
 .slide-button-current {
   background-color: rgb(255, 255, 255);
-  border: 2px solid white;
-  outline: none;
 }
 
 .slide-buttons button:focus {
   background-color: rgb(255, 255, 255);
-  border: 2px solid white;
+  border: 2px solid #fff;
   outline: none;
 }
 
@@ -1060,7 +1072,6 @@ z-index: 1;
   border-color: rgb(178, 178, 178);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
-  opacity: 0.52;
   position: absolute;
   width: 368px;
   height: 44px;
@@ -1158,6 +1169,10 @@ z-index: 1;
   height: 32px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.502);
+}
+
+.social-button:hover {
+
 }
 
 .sertification {
@@ -1505,7 +1520,8 @@ input[type="checkbox"]:checked {
   margin: 0 auto;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -221.5px;
+  margin-left: -239px;
 }
 
 .modal-feedback-title {
@@ -1562,6 +1578,7 @@ input[type="checkbox"]:checked {
   top: 191px;
   left: 24px;
   font-size: 16px;
+  font-family: inherit;
   padding: 10px 15px;
 }
 
@@ -1748,20 +1765,22 @@ hr {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    transform: translateX(-10%);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    transform: translateX(10%);
   }
 }
 
 @keyframes fadein{
     0% { opacity:0; }
-    30% { opacity: 0.3}
-    60% { opacity:0.6; }
     100% { opacity:1; }
+}
+
+input, select, textarea {
+  color: #000;
 }

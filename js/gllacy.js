@@ -14,12 +14,13 @@ var slide_1 = body.querySelector(".slide-block-1");
 var slide_2 = body.querySelector(".slide-block-2");
 var slide_3 = body.querySelector(".slide-block-3");
 
-window.onload = function () {
-    slideBtn_1.focus();
-};
+
 
 slideBtn_1.addEventListener("click", function(evt){
   evt.preventDefault();
+  slideBtn_1.classList.add("slide-button-current");
+  slideBtn_2.classList.remove("slide-button-current");
+  slideBtn_3.classList.remove("slide-button-current");
   body.style.backgroundColor = "rgb(132, 157, 143)";
   slide_2.classList.remove("active");
   slide_3.classList.remove("active");
@@ -28,6 +29,9 @@ slideBtn_1.addEventListener("click", function(evt){
 
 slideBtn_2.addEventListener("click", function(evt){
   evt.preventDefault();
+  slideBtn_2.classList.add("slide-button-current");
+  slideBtn_1.classList.remove("slide-button-current");
+  slideBtn_3.classList.remove("slide-button-current");
   body.style.backgroundColor = "#8996a6";
   slide_1.classList.remove("active");
   slide_3.classList.remove("active");
@@ -36,6 +40,9 @@ slideBtn_2.addEventListener("click", function(evt){
 
 slideBtn_3.addEventListener("click", function(evt){
   evt.preventDefault();
+  slideBtn_3.classList.add("slide-button-current");
+  slideBtn_1.classList.remove("slide-button-current");
+  slideBtn_2.classList.remove("slide-button-current");
   body.style.backgroundColor = "#9d8b84";
   slide_2.classList.remove("active");
   slide_1.classList.remove("active");
@@ -56,11 +63,15 @@ connectBtn.addEventListener("click", function(evt){
 closeBtn.addEventListener("click", function(evt){
   evt.preventDefault();
   popup.classList.remove("modal-show");
+  formPopup.classList.remove("modal-error");
 })
 
 form.addEventListener("submit", function(evt){
   if (!login.value || !email.value) {
     evt.preventDefault();
+    formPopup.classList.remove("modal-error");
+    formPopup.offsetWidth = formPopup.offsetWidth;
+    formPopup.classList.add("modal-error")
   } else {
     localStorage.setItem("login", login.value);
   }
@@ -70,6 +81,7 @@ window.addEventListener("keydown", function (evt){
   if (evt.keyCode === 27) {
     if (popup.classList.contains("modal-show")) {
       popup.classList.remove("modal-show");
+      formPopup.classList.remove("modal-error");
     }
   }
 })
