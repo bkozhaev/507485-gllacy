@@ -763,9 +763,16 @@ z-index: 1;
 }
 
 .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-left: 27px;
   padding-right: 27px;
   margin: 0 auto;
+}
+
+.product-list li {
+  margin-bottom: 40px;
 }
 
 .product-item {
@@ -775,14 +782,6 @@ z-index: 1;
   list-style: none;
   margin: 0;
   text-decoration: underline;
-}
-
-
-.ice-cream-row {
-  display: flex;
-  flex-basis: 1200px;
-  justify-content: space-between;
-  margin-bottom: 38px;;
 }
 
 .product-ice-cream {
