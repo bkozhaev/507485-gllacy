@@ -122,6 +122,11 @@ a {
   margin-left: 10px;
 }
 
+.site-navigation a{
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 225, 255, 0.5);
+}
+
 .site-navigation-item-current {
   background-color: #d07058;
 }
@@ -759,7 +764,9 @@ z-index: 1;
   height: 320px;
   list-style: none;
   margin: 0;
+  text-decoration: underline;
 }
+
 
 .ice-cream-row {
   display: flex;
@@ -887,6 +894,8 @@ z-index: 1;
   height: 38px;
   top: 275px;
   margin: 0 auto;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
 }
 
 .shop-info {
@@ -1153,6 +1162,10 @@ z-index: 1;
   padding-bottom: 40px;
 }
 
+.footer-social {
+  align-self: center;
+}
+
 .footer-social-list{
   display: flex;
   width: 185px;
@@ -1160,7 +1173,6 @@ z-index: 1;
   margin: 0;
   padding: 0;
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 .social-button {
@@ -1169,10 +1181,11 @@ z-index: 1;
   height: 32px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.502);
+  opacity: 0.5;
 }
 
 .social-button:hover {
-
+  opacity: 1;
 }
 
 .sertification {
@@ -1183,6 +1196,8 @@ z-index: 1;
 
 .sertification a {
   margin-bottom: 5px;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-company-info {
@@ -1201,6 +1216,24 @@ z-index: 1;
   width: 15px;
   height: 13px;
   left: -20px;
+}
+
+.footer-copyright {
+  font-size: 12px;
+}
+
+.copyrights {
+  display: inline-block;
+}
+.copyrights a{
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer a:hover {
+  color: #ffbc9e;
+  text-decoration-color: #ffbc9e;
 }
 
 .filter-form {
