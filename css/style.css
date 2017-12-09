@@ -86,7 +86,6 @@ a {
   text-align: right;
   font-size: 14px;
   line-height: 24px;
-  font-weight: bold;
   vertical-align: top;
 }
 
@@ -129,6 +128,10 @@ a {
 
 .site-navigation-item-current {
   background-color: #d07058;
+}
+
+.site-navigation-item-current a {
+  text-decoration: none;
 }
 
 .site-navigation-item {
@@ -473,11 +476,10 @@ a {
   height: 32px;
   border-radius: 20px;
   border: none;
-  text-indent: 40px;
+  text-indent: 30px;
   color: #000;
   font-family: "Robotomedium";
   font-size: 14px;
-  padding-bottom: 5px;
 }
 
 .breadcrumps{
@@ -493,6 +495,12 @@ a {
 .breadcrumps a {
   color: #fff;
   font-size: 14px;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumps li:last-child a{
+  text-decoration: none;
 }
 
 .breadcrumps span {
@@ -523,6 +531,8 @@ a {
   font-weight: bold;
   display: block;
   outline: none;
+  padding: 0;
+  border: none;
 }
 
 .middle-button:hover {
@@ -635,7 +645,7 @@ z-index: 1;
 
 .slide-buttons li{
   list-style: none;
-  margin-right: 15px;
+  margin-right: 8px;
 }
 
 .slide-buttons li:last-of-type {
@@ -1036,6 +1046,8 @@ z-index: 1;
 
 
 .subscription {
+  box-sizing: border-box;
+  padding: 6px 6px;
   background-image: repeating-linear-gradient(-45deg, white 0, white 10px, rgb(146, 205, 255) 10px, rgb(146, 205, 255) 20px, white 20px, white 30px, rgb(254, 158, 144) 30px, rgb(254, 158, 144) 40px);
   width: 560px;
   height: 220px;
@@ -1045,33 +1057,30 @@ z-index: 1;
 }
 
 .white-background {
-  background-color: white;
-  display: block;
-  width: 549px;
-  height: 211px;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 36px 20px;
+  background-color: #f8f7f4;
   border-radius: 15px;
-  position: absolute;
-  top: 5px;
-  left: 6px;
 }
 
 .subscription p {
+  margin-bottom: 30px;
   display: block;
-  position: absolute;
   font-size: 16px;
   line-height: 22px;
   color: #5a5a5a;
-  left: 25px;
-  top: 38px;
   margin: 0;
+  padding-bottom: 30px;
 }
 
 .subscription-form {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   width: 506px;
-  top: 135px;
-  left: 25px;
 }
 
 .subscription-email {
@@ -1081,7 +1090,6 @@ z-index: 1;
   border-color: rgb(178, 178, 178);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
-  position: absolute;
   width: 368px;
   height: 44px;
   margin: 0;
@@ -1105,6 +1113,8 @@ z-index: 1;
   width: 1200px;
   height: 430px;
   margin-bottom: 35px;
+  padding-top: 61px;
+  padding-left: 871px;
 }
 
 .location img {
@@ -1114,34 +1124,27 @@ z-index: 1;
 }
 
 .location-address {
-  display: block;
-  position: absolute;
+  box-sizing: border-box;
   width: 302px;
-  height: 305px;
-  background-color: #fff;
+  height: 307px;
+  background-color: #fffefe;
   border-radius: 10px;
   font-size: 14px;
-  left: 871px;
-  top: 61px;
-  padding: 0;
-  margin: 0;
+  padding: 15px 25px;
 }
 
-.location-address-text {
-  position: absolute;
-  margin-left: 26px;
-  top: 0px;
+.location-address strong {
+  font-size: 18px;
+  line-height: 30px;
 }
+
 
 .location-button {
   display: block;
-  position: absolute;
   width: 254px;
   height: 47px;
-  top: 229px;
-  left: 25px;
-  margin: 0;
   border: none;
+  padding: 0;
 }
 
 .main-footer a{
@@ -1300,6 +1303,7 @@ legend {
   align-self:flex-end;
   padding-left: 16px;
   padding-right: 16px;
+  border: none;
 }
 
 .inputs-title {
@@ -1546,40 +1550,38 @@ input[type="checkbox"]:checked {
 }
 
 .modal-feedback {
+  box-sizing: border-box;
   position: absolute;
   width: 478px;
   height: 443px;
   background-color: #f8f7f4;
   margin: 0 auto;
+  border-radius: 5px;
   top: 50%;
   left: 50%;
   margin-top: -221.5px;
   margin-left: -239px;
+  padding: 20px 24px;
 }
 
 .modal-feedback-title {
   font-size: 24px;
   font-family: "Robotomedium";
-  position: absolute;
-  top: 20px;
-  left: 24px;
   margin: 0;
   padding: 0;
+  margin-bottom: 25px;
 }
 
 .feedback-input-name {
   box-sizing: border-box;
-  display: block;
-  position: absolute;
   width: 267px;
   height: 44px;
   border: 1px solid rgb(178, 178, 178);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
-  top: 63px;
-  left: 24px;
   font-size: 16px;
   padding: 10px 15px;
+  margin-bottom: 22px;
 }
 
 .feedback-input-email {
@@ -1589,13 +1591,11 @@ input[type="checkbox"]:checked {
   border-color: rgb(178, 178, 178);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
-  position: absolute;
   width: 267px;
   height: 44px;
-  top: 127px;
-  left: 24px;
   font-size: 16px;
   padding: 10px 15px;
+  margin-bottom: 22px;
 }
 
 .feedback-input-textarea {
@@ -1605,21 +1605,16 @@ input[type="checkbox"]:checked {
   border-color: rgb(178, 178, 178);
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
-  position: absolute;
   width: 428px;
   height: 155px;
-  top: 191px;
-  left: 24px;
   font-size: 16px;
   font-family: inherit;
   padding: 10px 15px;
+  margin-bottom: 15px;
 }
 
 .feedback-button {
-  border: none;
-  position: absolute;
-  top: 372px;
-  left: 315px;
+  margin-left: 290px;
   width: 141px;
   height: 47px;
 }
