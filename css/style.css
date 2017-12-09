@@ -116,7 +116,7 @@ a {
   line-height: 32px;
   vertical-align: middle;
   padding: 0;
-  width: 366px;
+  width: 380px;
   justify-content: space-between;
   margin-left: 10px;
 }
@@ -489,7 +489,7 @@ a {
   padding: 0;
   margin: 0;
   padding-left: 27px;
-  width: 223px;
+  width: 230px;
 }
 
 .breadcrumps a {
@@ -504,7 +504,7 @@ a {
 }
 
 .breadcrumps span {
-  margin-left: 5px;
+  margin-left: 10px;
   color: #fff;
 }
 
@@ -1333,6 +1333,11 @@ legend {
   background-color: #fff;
 }
 
+.filter-ice-cream-sort:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 .filter-price-range {
   margin-left: 20px;
   position: relative;
@@ -1401,6 +1406,11 @@ input[type="radio"] {
   background: url("../img/radio-off.svg") no-repeat;
   outline: none;
   vertical-align: sub;
+  opacity: 0.7;
+}
+
+input[type="radio"]:hover {
+  opacity: 1;
 }
 
 input[type="radio"]:checked {
@@ -1452,10 +1462,15 @@ input[type="checkbox"] {
   outline: none;
 
   margin: +7px 0 0 +3px;
+  opacity: 0.7;
 }
 
 input[type="checkbox"]:checked {
   background: url("../img/checkbox-on.svg") no-repeat;
+}
+
+input[type="checkbox"]:hover {
+  opacity: 1;
 }
 
 .pagination-list-div {
@@ -1474,7 +1489,7 @@ input[type="checkbox"]:checked {
   font-size: 16px;
   font-family: "Robotomedium";
   right: 0;
-  width: 190px;
+  width: 210px;
   justify-content: space-between;
   padding: 0;
   margin: 0;
@@ -1513,6 +1528,10 @@ input[type="checkbox"]:checked {
   color: #000;
 }
 
+.pagination-list li:active a{
+  color: #000;
+}
+
 .pagination-button-forward {
   background: url("../img/button-forward.png") no-repeat;
   background-position: center;
@@ -1521,6 +1540,7 @@ input[type="checkbox"]:checked {
   width: 26px;
   height: 26px;
   border: none;
+  outline: none;
 }
 
 .pagination-button-backward {
@@ -1532,6 +1552,7 @@ input[type="checkbox"]:checked {
   width: 26px;
   height: 26px;
   border: none;
+  outline: none;
 }
 
 .pagination-list a {
