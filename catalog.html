@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
 
-
   <body>
+    <h1 class="visually-hidden">Каталог сливочного мороженного</h1>
     <div class="body-wrapper">
       <header class="main-header main-header-catalog">
         <div class="header-top">
@@ -18,6 +18,7 @@
             </a>
 
             <nav class="main-navigation">
+              <h2 class="visually-hidden">Навигация по сайту</h2>
               <ul class="site-navigation">
                 <li class="site-navigation-item site-navigation-item-current">
                     <a class="catalog-button" href="catalog.html">Каталог</a>
@@ -55,7 +56,7 @@
               <section class="modal modal-search">
                 <h2 class="visually-hidden">Поиск по сайту</h2>
                 <form class="search" action="index.html" method="post">
-                  <input id="search-field" type="search" name="search" placeholder="Что ищем?">
+                  <input class="search-field" id="search-field" type="search" name="search" placeholder="Что ищем?">
                   <label class="label-search" for="search-field"></label>
                 </form>
               </section>
@@ -71,8 +72,8 @@
                 <h2 class="visually-hidden">Меню регистрации</h2>
 
                 <form  action="index.html" method="post">
-                  <input id="entrance-field-email" type="email" name="email" placeholder="Электронная почта">
-                  <input id="entrance-field-password" type="password" name="password" placeholder="Пароль">
+                  <input class="entrance-field-email" id="entrance-field-email" type="email" name="email" placeholder="Электронная почта">
+                  <input class="entrance-field-password" id="entrance-field-password" type="password" name="password" placeholder="Пароль">
                   <div class="button-and-link">
                     <button class="middle-button entrance-button-1" id="entrance-submit-button" type="submit" name="entrance">Войти</button>
                     <div class="modal-login-links">
@@ -97,7 +98,7 @@
                       <button class="basket-submenu-close-button" type="button" name="close-button">
                         <img src="img/cross-big.svg" height="17" width="18" alt="cross">
                       </button>
-                      <img class="basket-submenu-img" src="img/ice-cream-icon-1.gif" alt="">
+                      <img class="basket-submenu-img" src="img/ice-cream-icon-1.gif" width="33" height="33" alt="ice-cream-icon">
                     </div>
                     <div class="basket-submenu-text-items">
                       <p class="basket-submenu-text basket-submenu-text-title">Пломбир с апельсиновым джемом</p>
@@ -110,7 +111,7 @@
                       <button class="basket-submenu-close-button" type="button" name="close-button">
                         <img src="img/cross-big.svg" height="17" width="18" alt="cross">
                       </button>
-                      <img class="basket-submenu-img" src="img/ice-cream-icon-2.gif" alt="">
+                      <img class="basket-submenu-img" src="img/ice-cream-icon-2.gif" width="33" height="33" alt="ice-cream-icon">
                     </div>
                     <div class="basket-submenu-text-items">
                       <p class="basket-submenu-text basket-submenu-text-title">Клубничный пломбир с присыпкой из белого шоколада</p>
@@ -154,7 +155,6 @@
           <h3 class="filter-title">Сливочное мороженное</h3>
           <form class="filter-form" action="index.html" method="get">
             <fieldset>
-              <legend>Сливочное мороженое</legend>
               <div class="filter-line filter-line-1">
                 <div class="filters-range filter-popularity-select">
                   <p class="inputs-title">Сортировка:</p>
@@ -168,8 +168,8 @@
 
                 <div class="filters-range filter-price-range">
                   <p class="inputs-title">Цена 100 руб. - 500 руб.</p>
-                    <input class="filter filter-range" id="filter-range-1" type="range" name="price-range-1" value="120" min="100" max="500">
-                    <input class="filter filter-range" id="filter-range-2" type="range" name="price-range-2" value="400" min="100" max="500">
+                    <input class="filter filter-range-1" id="filter-range-1" type="range" name="price-range-1" value="120" min="100" max="500">
+                    <input class="filter filter-range-2" id="filter-range-2" type="range" name="price-range-2" value="400" min="100" max="500">
                 </div>
                 <div class="filters-range filter-radio">
                   <p class="inputs-title">Жирность:</p>
@@ -237,7 +237,7 @@
               <li class="product-item">
                 <a href="#">
                   <img src="img/hit-ice-cream-1.png" width="267" height="267" alt="Сливочное мороженое">
-                  <p class="ice-creams-price">310<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                  <p class="ice-creams-price">310<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                   <p class="hit-creams-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
                 </a>
                 <div class="product-item-hover-block">
@@ -248,7 +248,7 @@
               <li class="product-item">
                 <a href="#">
                   <img src="img/hit-ice-cream-2.png" width="267" height="267" alt="Сливочное кофейное">
-                  <p class="ice-creams-price">380<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                  <p class="ice-creams-price">380<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                   <p class="hit-creams-title">Сливочно кофейное с кусочками шоколада</p>
                 </a>
                 <div class="product-item-hover-block">
@@ -259,7 +259,7 @@
             <li class="product-item">
               <a href="#">
                 <img src="img/hit-ice-cream-3.png" width="267" height="267" alt="Сливочно-клубичное">
-                <p class="ice-creams-price">380<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                <p class="ice-creams-price">380<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                 <p class="hit-creams-title">Сливочно-клубничное с присыпкой из белого шоколада</p>
               </a>
               <div class="product-item-hover-block">
@@ -270,7 +270,7 @@
             <li class="product-item">
               <a href="#">
                 <img src="img/hit-ice-cream-4.png" width="267" height="267" alt="Сливочно-крембрюле мороженое">
-                <p class="ice-creams-price">415<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                <p class="ice-creams-price">415<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                 <p class="hit-creams-title">Сливочное крем-брюле с карамельной подливкой</p>
               </a>
               <div class="product-item-hover-block">
@@ -281,7 +281,7 @@
             <li class="product-item">
               <a href="#">
                 <img src="img/ice-cream-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
-                <p class="ice-creams-price">325<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                <p class="ice-creams-price">325<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                 <p class="hit-creams-title">Сливочное с брусничным джемом</p>
               </a>
               <div class="product-item-hover-block">
@@ -292,7 +292,7 @@
             <li class="product-item">
               <a href="#">
                 <img src="img/ice-cream-6.png" width="267" height="267" alt="Сливочное черничное">
-                <p class="ice-creams-price">410<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                <p class="ice-creams-price">410<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                 <p class="hit-creams-title">Сливочное черничное с цельнымми ягодами черники</p>
               </a>
               <div class="product-item-hover-block">
@@ -303,7 +303,7 @@
             <li class="product-item">
               <a href="#">
                 <img src="img/ice-cream-7.png" width="267" height="267" alt="Сливочно лимонное">
-                <p class="ice-creams-price">375<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                <p class="ice-creams-price">375<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                 <p class="hit-creams-title">Сливочно лимонное с крамльной присыпкой</p>
               </a>
               <div class="product-item-hover-block">
@@ -314,7 +314,7 @@
             <li class="product-item">
               <a href="#">
                 <img src="img/ice-cream-8.png" width="267" height="267" alt="Сливочно лимонное">
-                <p class="ice-creams-price">320<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                <p class="ice-creams-price">320<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                 <p class="hit-creams-title">Сливочное с шоколадной стружкой</p>
               </a>
               <div class="product-item-hover-block">
@@ -325,7 +325,7 @@
             <li class="product-item">
               <a href="#">
                 <img src="img/ice-cream-9.png" width="267" height="267" alt="Сливочно лимонное">
-                <p class="ice-creams-price">440<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                <p class="ice-creams-price">440<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                 <p class="hit-creams-title">Сливочно ванильное с кусочками шоколада</p>
               </a>
               <div class="product-item-hover-block">
@@ -336,7 +336,7 @@
             <li class="product-item">
               <a href="#">
                 <img src="img/ice-cream-10.png" width="267" height="267" alt="Сливочно лимонное">
-                <p class="ice-creams-price">435<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                <p class="ice-creams-price">435<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                 <p class="hit-creams-title">Сливочное с ментоловым сиропом</p>
               </a>
               <div class="product-item-hover-block">
@@ -347,7 +347,7 @@
             <li class="product-item">
               <a href="#">
                 <img src="img/ice-cream-11.png" width="267" height="267" alt="Сливочно лимонное">
-                <p class="ice-creams-price">355<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                <p class="ice-creams-price">355<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                 <p class="hit-creams-title">Сливочное с кусочками черного шоколада</p>
               </a>
               <div class="product-item-hover-block">
@@ -358,7 +358,7 @@
             <li class="product-item">
               <a href="#">
                 <img src="img/ice-cream-12.png" width="267" height="267" alt="Сливочно лимонное">
-                <p class="ice-creams-price">420<img src="img/ruble.svg" alt="Р"><span>/кг</span></p>
+                <p class="ice-creams-price">420<img src="img/ruble.svg" width="30" height="35" alt="Р"><span>/кг</span></p>
                 <p class="hit-creams-title">Сливочное с мятным сиропом</p>
               </a>
               <div class="product-item-hover-block">
@@ -388,10 +388,10 @@
         <div class="main-footer">
           <div class="footer-social">
             <ul class="footer-social-list">
-              <li><a class="social-button" href="#" target="_blank"><img src="img/twitter.svg" alt="твитер"></a></li>
-              <li><a class="social-button" href="#" target="_blank"><img src="img/fb.svg" alt="фейсбук"></a></li>
-              <li><a class="social-button" href="#" target="_blank"><img src="img/instagram.svg" alt="инстаграм"></a></li>
-              <li><a class="social-button" href="#" target="_blank"><img src="img/vk.svg" alt="в контакте"></a></li>
+              <li><a class="social-button" href="#" target="_blank"><img src="img/twitter.svg" width="32" height="32" alt="твитер"></a></li>
+              <li><a class="social-button" href="#" target="_blank"><img src="img/fb.svg" width="32" height="32" alt="фейсбук"></a></li>
+              <li><a class="social-button" href="#" target="_blank"><img src="img/instagram.svg" width="32" height="32" alt="инстаграм"></a></li>
+              <li><a class="social-button" href="#" target="_blank"><img src="img/vk.svg" width="32" height="32" alt="в контакте"></a></li>
             </ul>
           </div>
           <div class="sertification">
