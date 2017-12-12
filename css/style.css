@@ -1054,6 +1054,11 @@ z-index: 1;
   padding: 0;
 }
 
+.blog-news-title a:hover {
+  color: #ffbc9e;
+  text-decoration-color: #ffbc9e;
+}
+
 
 .subscription {
   box-sizing: border-box;
@@ -1130,9 +1135,10 @@ z-index: 1;
 }
 
 .location img {
+  display: block;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 140px;
+  left: 266px;
 }
 
 .location-address {
@@ -1875,10 +1881,10 @@ hr {
 input, select, textarea {
   color: #000;
 }
-
-input[type="email"],
-input[type="password"],
-input[type="textarea"],
+input[type="search"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="textarea"]:hover,
 input[type="text"]:hover {
   border-style: solid;
   border-width: 2px;
