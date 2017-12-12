@@ -1122,35 +1122,47 @@ z-index: 1;
   width: 1200px;
   height: 430px;
   margin-bottom: 16px;
-  padding-top: 61px;
-  padding-left: 871px;
+}
+
+.map iframe{
+  position: relative;
+  z-index: 2;
 }
 
 .location img {
   position: absolute;
-  top: 139px;
-  left: 266px;
+  top: 0;
+  left: 0;
 }
 
 .location-address {
   box-sizing: border-box;
   width: 302px;
   height: 307px;
+  top: 59px;
+  right: 28px;
   background-color: #fffefe;
   border-radius: 10px;
   font-size: 14px;
   padding: 15px 25px;
+  position: absolute;
+  z-index: 3;
 }
 
 .location-address-text {
   margin-bottom: 20px;
-}
-
-.location-address-text p{
   font-size: 14px;
-  line-height: 20px;
+  line-height: 18px;
 }
 
+.location-text-first-part {
+  padding: 0;
+  margin-bottom: -4px;
+}
+
+.location-text-second-part {
+  padding: 0;
+}
 
 .location-address strong {
   font-size: 18px;
