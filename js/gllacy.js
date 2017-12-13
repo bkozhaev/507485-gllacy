@@ -21,7 +21,7 @@ slideBtn_1.addEventListener("click", function(evt){
   slideBtn_1.classList.add("slide-button-current");
   slideBtn_2.classList.remove("slide-button-current");
   slideBtn_3.classList.remove("slide-button-current");
-  body.style.backgroundColor = "rgb(132, 157, 143)";
+  body.style.backgroundColor = "#849d8f";
   slide_2.classList.remove("active");
   slide_3.classList.remove("active");
   slide_1.classList.add("active");
