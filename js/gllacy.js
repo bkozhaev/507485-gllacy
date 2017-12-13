@@ -1,6 +1,6 @@
 var connectBtn = document.querySelector(".location-button");
 var popup = document.querySelector(".modal-wrapper");
-var formPopup = popup.querySelector(".modal-feedback")
+var formPopup = document.querySelector(".modal-feedback")
 var closeBtn = popup.querySelector(".close-button");
 var login = popup.querySelector("[name=login]");
 var form = popup.querySelector("form");
@@ -52,6 +52,7 @@ slideBtn_3.addEventListener("click", function(evt){
 connectBtn.addEventListener("click", function(evt){
   evt.preventDefault();
   popup.classList.add("modal-show");
+  formPopup.classList.add("modal-bounce");
   if (storage) {
     login.value = storage;
     email.focus();
