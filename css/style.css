@@ -83,13 +83,14 @@ a {
   justify-content: flex-end;
   padding-right: 27px;
   margin-top: -25px;
+  z-index: -1;
 }
 
 .header-bottom{
   display: flex;
   position: absolute;
   top: 95px;
-  z-index: 1;
+  z-index: 0;
   margin: 0;
 }
 
@@ -532,8 +533,9 @@ a {
 }
 
 .breadcrumps span {
-  margin-left: 10px;
+  margin-left: 5px;
   color: #fff;
+  margin-right: 7px;
 }
 
 .container {
@@ -1655,7 +1657,7 @@ input[type="checkbox"]:hover {
 
 .pagination-button-forward {
   background: url("../img/button-forward.png") no-repeat;
-  background-position: center;
+  background-position: 12px center;
   position: absolute;
   left: -4px;
   width: 26px;
@@ -1667,7 +1669,7 @@ input[type="checkbox"]:hover {
 .pagination-button-backward {
   display: inline-block;
   background: url("../img/button-backward.png") no-repeat;
-  background-position: center;
+  background-position: 7px center;
   position: absolute;
   right: -8px;
   width: 26px;
@@ -1692,7 +1694,7 @@ input[type="checkbox"]:hover {
 }
 
 .modal-feedback {
-  transform: translateY(-2000px);
+  display: none;
   box-sizing: border-box;
   position: absolute;
   width: 478px;
@@ -1807,6 +1809,7 @@ input[type="checkbox"]:hover {
 .basket-submenu-text-items {
   display: inline-flex;
   justify-content: flex-start;
+  margin-left: 7px;
 }
 
 .basket-submenu-text-title {
@@ -1824,10 +1827,10 @@ hr {
 }
 
 .basket-submenu-text-total {
-  position: absolute;
   font-weight: bold;
   right: 14px;
   font-size: 15px;
+  text-align: right;
 }
 
 .basket-submenu-close-button {
@@ -1835,14 +1838,12 @@ hr {
   border: none;
   width: 33px;
   height: 33px;
-  margin-right: 10px;
 }
 
 .basket-submenu-img {
   display: block;
   width: 33px;
   height: 33px;
-  padding-right: 20px;
 }
 
 .basket-submenu-list {
@@ -1865,13 +1866,9 @@ hr {
 }
 
 .basket-submenu-button {
-  line-height: inherit;
-  vertical-align: middle;
-  border: none;
   width: 172px;
   height: 46px;
-  bottom: 18px;
-  right: 14px;
+  margin-left: 344px;
 }
 
 /*input::placeholder {
@@ -1899,6 +1896,7 @@ hr {
 }
 
 .modal-bounce {
+  display: block;
   animation: bounce 0.6s;
 }
 
