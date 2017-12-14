@@ -607,9 +607,9 @@ a {
 
 .slide-block-1::before{
   content: "";
-  background: url("../img/ice-cream-big.png") no-repeat;
+  background: #849d8f url("../img/ice-cream-big.png") no-repeat;
   background-position: 50px 0;
-  width: 1200px;
+  width: 1100px;
   height: 881px;
   position: absolute;
   z-index: -1;
@@ -617,9 +617,9 @@ a {
 
 .slide-block-2::before{
   content: "";
-  background: url("../img/ice-cream-big-2.png") no-repeat;
+  background: #8996a6 url("../img/ice-cream-big-2.png") no-repeat;
   background-position: 50px 0;
-  width: 1200px;
+  width: 1100px;
   height: 881px;
   position: absolute;
   z-index: -1;
@@ -627,9 +627,9 @@ a {
 
 .slide-block-3::before{
   content: "";
-  background: url("../img/ice-cream-big-3.png") no-repeat;
+  background: #9d8b84 url("../img/ice-cream-big-3.png") no-repeat;
   background-position: 50px 0;
-  width: 1200px;
+  width: 1100px;
   height: 881px;
   position: absolute;
   z-index: -1;
@@ -805,12 +805,12 @@ z-index: 1;
 }
 
 .malinka {
-    background: url("../img/malina-background.jpg") no-repeat;
+    background: #849d8f url("../img/malina-background.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
 .chocolat {
-    background: url("../img/chocolat-background.jpg") no-repeat;
+    background: #849d8f url("../img/chocolat-background.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
