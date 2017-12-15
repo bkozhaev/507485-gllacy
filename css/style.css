@@ -974,7 +974,7 @@ z-index: 1;
   top: 281px;
   margin: 0 auto;
   text-decoration-color: rgba(255, 255, 255, 0.3);
-  margin-top: 12px;
+  margin-top: 10px;
   width: 256px;
 }
 
@@ -1015,7 +1015,7 @@ z-index: 1;
   line-height: 30px;
   margin: 0 auto;
   font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .shop-info-item {
@@ -1026,7 +1026,7 @@ z-index: 1;
   font-size: 16px;
   line-height: 22px;
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 }
 
 .item-1::after {
@@ -1036,7 +1036,7 @@ z-index: 1;
   position: absolute;
   width: 49px;
   height: 49px;
-  top: -16px;
+  top: -13px;
   left: 0;
 
 }
@@ -1048,7 +1048,7 @@ z-index: 1;
   position: absolute;
   width: 49px;
   height: 49px;
-  top: -16px;
+  top: -13px;
   left: 0;
 }
 
@@ -1059,7 +1059,7 @@ z-index: 1;
   position: absolute;
   width: 49px;
   height: 49px;
-  top: -16px;
+  top: -13px;
   left: 0;
 }
 
@@ -1070,7 +1070,7 @@ z-index: 1;
   position: absolute;
   width: 49px;
   height: 49px;
-  top: -16px;
+  top: -13px;
   left: 0;
 }
 
@@ -1194,6 +1194,7 @@ z-index: 1;
 .map iframe{
   position: relative;
   z-index: 2;
+  border: none;
 }
 
 .location img {
@@ -1218,7 +1219,7 @@ z-index: 1;
 }
 
 .location-address-text {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: 18px;
 }
@@ -1227,7 +1228,7 @@ z-index: 1;
   padding: 0;
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .location-text-first-part span {
@@ -1243,8 +1244,8 @@ z-index: 1;
 }
 
 .location-text-second-part span {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 19px;
+  line-height: 31px;
   font-weight: 600;
 }
 
@@ -1253,9 +1254,11 @@ z-index: 1;
 .location-button {
   display: block;
   width: 250px;
-  height: 47px;
+  height: 45px;
   border: none;
   padding: 0;
+  line-height: 45px;
+  vertical-align: middle;
 }
 
 .main-footer a{
@@ -1600,7 +1603,7 @@ input[type="checkbox"]:hover {
   justify-content: flex-end;
   padding-left: 27px;
   padding-right: 27px;
-  margin-top: 40px;
+  margin-top: 44px;
 }
 
 
@@ -1885,7 +1888,7 @@ hr {
 }
 .footer-line {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding-left: 27px;
   background: #fff;
 }
